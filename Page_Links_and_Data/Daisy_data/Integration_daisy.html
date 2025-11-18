@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Methoden, um CSS in HTML zu integrieren</title>
+</head>
+<body>
+  <h1>Methoden, um CSS in HTML zu integrieren</h1>
+  	<header>
+        <nav>
+			    <ul>
+			    <li><a href="../../index.html">Home</a></li>
+			    <li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
+			    <li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+			    <li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+			    <li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+			    <li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+			    <li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
+			    <li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+			    </ul>
+        </nav>
+		<hr>
+    
+        <link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	      <link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	      <link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	      <link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	      <link rel="manifest" href="../../media_Icon/site.webmanifest" />
+    
+    
+    </header>
+
+  <p>
+    CSS (Cascading Style Sheets) ist eine Sprache, mit der das Aussehen von HTML-Seiten gestaltet wird.
+    CSS kann in HTML auf drei Arten integriert werden: extern über einen
+    &lt;link&gt;-Tag im &lt;head&gt;-Bereich, intern mit einem &lt;style&gt;-Tag im
+    &lt;head&gt;-Bereich oder inline mithilfe des style-Attributs direkt in einzelnen HTML-Tags.
+    Die externe Methode ist für größere Projekte die gängigste und beste Wahl.
+  </p>
+
+  <h2>1. Externe CSS-Datei (empfohlen)</h2>
+  <p>
+    Die externe CSS-Datei ist ideal, wenn mehrere Seiten einer Webseite den gleichen Stil verwenden sollen.
+    Man erstellt eine separate .css-Datei (z.B. <strong>style.css</strong>) und verknüpft sie mit dem
+    HTML-Dokument über den &lt;link&gt;-Tag im &lt;head&gt;:
+  </p>
+  <pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+  </pre>
+  <p>Beispiel für ein Bild, das durch CSS gestaltet werden kann:</p>
+  <img src="https://via.placeholder.com/300x150.png?text=Beispielbild+CSS" alt="Beispielbild" width="300">
+
+  <h2>2. Interne CSS-Datei</h2>
+  <p>
+    Für einmalige Stilanpassungen einer einzelnen Seite kann man ein &lt;style&gt;-Tag im &lt;head&gt; verwenden:
+  </p>
+  <pre>
+&lt;style&gt;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    color: darkblue;
+  }
+&lt;/style&gt;
+  </pre>
+  <p>Damit kann man z.B. die Schriftart, Farben oder Abstände direkt auf einer Seite definieren.</p>
+
+  <h2>3. Inline Styles</h2>
+  <p>
+    Inline Styles werden direkt in den HTML-Tags gesetzt und eignen sich für einzelne Elemente:
+  </p>
+  <pre>
+&lt;p style="color: red; font-size: 18px;"&gt;Dieser Text ist rot und größer.&lt;/p&gt;
+  </pre>
+  <p>Inline Styles sollten sparsam genutzt werden, da sie die Wartung schwieriger machen.</p>
+
+  <h2>Zusätzliche Tipps</h2>
+  <ul>
+    <li>Erstellen Sie einen eigenen Ordner für Bilder (z.B. <strong>images</strong>), um sie sauber zu organisieren.</li>
+    <li>Für größere Projekte empfiehlt sich immer eine externe CSS-Datei.</li>
+    <li>Testen Sie die Seite regelmäßig in einem Browser, um das Ergebnis zu sehen.</li>
+    <li>Verwenden Sie Kommentare in HTML (<code>&lt;!-- Kommentar --&gt;</code>), um Code zu erklären.</li>
+  </ul>
+
+  <h2>Weitere Bilder einfügen</h2>
+  <p>Beispiel für ein zweites Bild:</p>
+  <img src="https://via.placeholder.com/200x100.png?text=CSS+Beispiel" alt="Beispiel 2" width="200">
+
+  <h2>Fazit</h2>
+  <p>
+    CSS bietet viele Möglichkeiten, um das Aussehen einer Webseite zu gestalten. Für größere Projekte
+    sollte man auf externe Stylesheets setzen. Interne Styles sind praktisch für einzelne Seiten,
+    während Inline Styles nur für kleine Anpassungen geeignet sind.
+  </p>
+
+</body>
+</html>
+
