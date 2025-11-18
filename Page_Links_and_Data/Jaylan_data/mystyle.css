@@ -1,0 +1,162 @@
+.header {
+    padding: 10px;
+    background: #2A7B9B;
+    background: linear-gradient(180deg,rgb(63, 152, 187) 0%, rgba(42, 123, 155, 0) 100%);
+    text-align: center;
+}
+
+.header h1 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-home {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-home:hover {
+    background: #6b0999;
+    transform: translateY(-2px);
+}
+
+.nav-Integration {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-Integration:hover {
+    background: #994f09;
+    transform: translateY(-2px);
+}
+
+.nav-Syntax {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-Syntax:hover {
+    background: #569909;
+    transform: translateY(-2px);
+}
+
+.nav-textformaterung {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-textformaterung:hover {
+    background: #990951;
+    transform: translateY(-2px);
+}
+
+.nav-flexbox {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-flexbox:hover {
+    background: #990909;
+    transform: translateY(-2px);
+}
+
+.nav-Buttons {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-Buttons:hover {
+    background: #0ec7b7;
+    transform: translateY(-2px);
+}
+
+.nav-Transition-Transform{
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-Transition-Transform:hover {
+    background: #979909;
+    transform: translateY(-2px);
+}
+
+.nav-Frameworks {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-Frameworks:hover {
+    background: #130999;
+    transform: translateY(-2px);
+}
+
+.nav-list li a {
+    text-decoration: none; /* entfernt die Unterstreichung */
+    color: black;          /* schwarze Schriftfarbe */
+    display: block;        /* sorgt dafür, dass die Fläche klickbar ist */
+    padding: 12px 20px;    /* gleiche Padding wie die li-Elemente */
+    font-family: JetBrains Mono, monospace; /* gleiche Schrift wie im Rest */
+    transition: 0.2s;
+}

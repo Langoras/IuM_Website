@@ -8,27 +8,29 @@
 	<meta name="author" content="Vorname Nachname">
 	<meta name="description" content="CSS Einführung ins Buttons">
 
-	<link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
-	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
-	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+	<link rel="icon" type="image/png" href="media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="media_Icon/site.webmanifest" />
+    <link rel="stylesheet" href="mystyle.css">
+
 
 
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Buttons mit CSS</h1>
         <nav>
-			<ul>
-			<li><a href="../../index.html">Home</a></li>
-			<li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
-			<li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
-			<li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
-			<li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
-			<li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
-			<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
-			<li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+			<ul class="nav-list">
+			<li class="nav-home"><a href="../../index.html">Home</a></li>
+			<li class="nav-Integration"><a href="../Daisy_data/fehlt_noch.html">Integration</a></li>
+			<li class="nav-Syntax"><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+			<li class="nav-textformaterung"><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+			<li class="nav-flexbox"><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+			<li class="nav-Buttons"><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+			<li class="nav-Transition-Transform"><a href="../Gerke_data/fehlt_noch.html">Transition & Transform</a></li>
+			<li class="nav-Frameworks"><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
 			</ul>
         </nav>
 		<hr>	
@@ -44,6 +46,19 @@
             Zum Beispiel wird man zu einer Neuen Unterseite weitergeleitet oder man bestätigt Transaktionen. 
             Buttons können verscheiden aussehen und verschiedene Effekte haben diese wollen wir uns im folgenden Dokument anschauen. 
         </section>
+        <section>
+            <h3>Wie ist ein Button aufgebaut</h3>
+            Der Grundaufbau eines Buttons besteht aus mindestes neuen Elementen. <br>
+            1. Die Farbe des Hintergrundes diese wird mir "background-color: [Farbe]"  angeben.<br>
+            2. Wie Rund bzw. eckig der Button sein soll. Angeben mit "border: [zahl]px".<br>
+            3. Die Farbe welche für ein Farbwechsel genutzt werden soll gibt man mit "color: [Farbe]" an.<br>
+            4. Das "padding" beschreibt wie weit die Kanten von dem text entfernt ist. <br>
+            5. "text-align" gibt an wo im Button der Text steht.<br>
+            6. Mit "text-decoration" ist es möglich den Text im Button zu unterstreichen zu färben oder auch einzurahmen.<br> 
+            7. "display: inline-block" sorgt dafür, dass der Button auf der Selben höhe ist wie  alles andere in der Zeile auch. <br>
+            8. Die "front-size" bestimmt wie groß die Schrift im Button ist. <br>
+            9. Mit der "cursor" Eigenschaft bestimmt man wie sich der Mauszeiger verändern soll, wenn er über dem Buttom hovert.<br>
+        </section>
 
         <section>
             <h3>Wie ist ein Button aufgebaut</h3>
@@ -58,7 +73,7 @@
                 </tr>
                 <tr>    
                     <td>border</td>
-                    <td>Mit border seten Sie den Style für alle vier Rahmenseitern gleichzeitig. Die Eigenschaft ist eine Kurzschreibweise der Eigenschaften border-width, border-style und border-color.
+                    <td>Mit border seten Sie den Style für alle vier Rahmenseitern gleichzeitig. Die Eigenschaft ist eine Kurzschreibweise der Eigenschaften border-width, border-style und border-color.</td><
                 </td>
                 </tr>
                 <tr>    
