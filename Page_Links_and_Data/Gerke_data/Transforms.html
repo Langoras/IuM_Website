@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<!-- Header muss vielleicht noch mit weiteren meta Elementen ausgebaut werden -->
-    <title>Abgabe1</title>
+    <title>Transforms & Transitions</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Gerke Goldhammer">
 	<meta name="description" content="CSS Einführung ins Thema Transform & Transitions">
@@ -27,7 +27,7 @@
 </head>
 <body>
 	<header>
-        <h1>CSS</h1>
+        <h1>Cascading Style Sheets (CSS)</h1>
         <nav>
 			<ul>
 			<li><a href="../../index.html">Home</a></li>
@@ -44,82 +44,94 @@
     </header>
 	
 	<article>
-		<section>
 			<h2>Transforms & Transitions</h2>
-		</section>
 		<section>
 			<h3>Einleitung </h3>
-			Dieser Artikel bringt ihnen näher wie man mit den CSS-Funktionen 
-			Tansform & Transition HTML-Elemente verändern kann. <br>
-			Mit Transform-Befehlen kann man Elemente bewegen, verzerren, rotieren und in verschiedene Richtungen skalieren.<br>
-			Mithilfe von Transition-Befehlen kann man die Übergänge zwischen zwei Zuständen eines Elementes kontrollieren. <br>
+			<p>Dieser Artikel bringt ihnen näher wie man mit den CSS-Funktionen 
+			Tansform & Transition HTML-Elemente verändern kann. 
+			Mit Transform-Befehlen kann man Elemente bewegen, verzerren, rotieren und in verschiedene Richtungen skalieren.
+			Mithilfe von Transition-Befehlen kann man die Übergänge zwischen zwei Zuständen eines Elementes kontrollieren. 
+		    </p>
 		</section>
 		<section>
 			<h3>Erklärung zu Transforms & Transitions</h3>
-			Zuerst gucken wir uns Transform an:  <br>
-			Mit transform: translate können wir ein Element verschieben: <br>
-			transform: translate(X-wert,y-wert) <br>
-			Der Wert wird in px(pixel) angeben kann aber auch in % angegeben werden <br><br>
-			Mit transform: rotate  rotieren wir einen Wert im Uhrzeigersinn. <br>
-			Der übergebene Wert wird kann entweder deg(degrees) oder in turn angeben werden. Zudem kann man gegen den Uhrzeigersinn rotieren, wenn man einen negativen Wert angibt. <br>
-			transform: rotate(Winkel) <br>
-			Zudem kann man in 3D rotieren indem mit rotateX(),rotateY() und rotateZ() um die entsprechende Achse rotiert. <br><br>
-			Mit transform:scale beeinflussen wir die Größe eines Objektes. <br>
-			transform: scale(x-Wert,y-Wert) <br>
-			Man kann auch mit scaleX() oder scaleY() jeweils nur einen Wert verändern. <br><br>
-			Mit transform:skew verzerren wir ein Objekt anhand der X und Y Achse. <br>
-			transform: skew(x-Winkel,y-Winkel) <br>
-			Die Werte werden wieder deg(degrees) angegeben, zudem kann wie bei transform:scale auch nur die einzelnen Werte verändern, indem man skewX() oder skewY() benutzt. <br>
-			Außerdem kann man mehrere Transformfunktionen kombinieren und auf einmal verwenden, allerdings sollte man auf die Reihenfolge achten. <br>
-			Die Transforms könnte man zum Beispiel mit Transitions kombinieren um ein Element auf ihrer Seite zu “animieren”. <br><br>
-			Transitions werden verwendet, wenn man den Zustand (sprich Position etc.) eines Elements verändert und dabei einen gesteuerten schrittweisen Übergang haben will. <br>
-			Transitions erzeugt man, indem man zuerst eine transition: Zeile in sein HTML-Element packt, in der dann angegeben wird wie lange die einzelnen Transitions dauern soll. Wenn man den Wert nicht angibt, wird meistens 0 für den Wert genommen. <br>
-			transition: width 0.5s, height 1s, background-color 2s, transform 3s; <br>
-			In diesem Beispiel soll der Übergang für die Breite eine halbe Sekunde dauern, der Höhenübergang vom Element 1 Sekunde, der Farbwechsel 2 Sekunden und der Transformbefehl 3 Sekunden <br><br>
-			In ein zweites HTML-Element (z.B. eine Pseudoklasse) schreibt man dann welche Werte sich verändern sollen. <br>
-			Wie löst man Transitions aus? <br>
-			Eine Möglichkeit Transitions auszulösen sind “Pseudoklassen”, welche hinter das zweites HTML-Element geschrieben werden<br> 
-			Beispiele für Pseudoklassen sind: <br><br>
-			:hover(die Maus hovert über dem Element) <br><br>
+			<p>Zuerst gucken wir uns Transform an:  
+			Mit transform: translate können wir ein Element verschieben: 
+			<code>transform: translate(X-wert,y-wert) </code>
+			Der Wert wird in px(pixel) angeben kann aber auch in % angegeben werden </p>
+			<p>
+			Mit transform: rotate  rotieren wir einen Wert im Uhrzeigersinn. 
+			Der übergebene Wert wird kann entweder deg(degrees) oder in turn angeben werden. Zudem kann man gegen den Uhrzeigersinn rotieren, 
+			wenn man einen negativen Wert angibt. 
+			<code>transform: rotate(Winkel)</code>
+			Zudem kann man in 3D rotieren indem mit rotateX(),rotateY() und rotateZ() um die entsprechende Achse rotiert. 
+		    </p>
+	
+			<p>
+			Mit transform:scale beeinflussen wir die Größe eines Objektes. 
+			<code>transform: scale(x-Wert,y-Wert) </code>
+			Man kann auch mit scaleX() oder scaleY() jeweils nur einen Wert verändern. 
+			</p>
 
-			:checked(Checkbox die bestätigt wurde) <br><br>
+			<p>
+			Mit transform:skew verzerren wir ein Objekt anhand der X und Y Achse. 
+			<code>transform: skew(x-Winkel,y-Winkel)</code> 
+			Die Werte werden wieder deg(degrees) angegeben, zudem kann wie bei transform:scale auch nur die einzelnen Werte verändern, 
+			indem man skewX() oder skewY() benutzt. 
+			Außerdem kann man mehrere Transformfunktionen kombinieren und auf einmal verwenden, allerdings sollte man auf die Reihenfolge achten. 
+			</p>
 
-			:focus(auswählbares Element das grade fokussiert wird, z.B. durch einen Mausklick) <br><br>
+			<p>
+			Die Transforms könnte man zum Beispiel mit Transitions kombinieren um ein Element auf ihrer Seite zu “animieren”. 
+			Transitions werden verwendet, wenn man den Zustand (sprich Position etc.) eines Elements verändert und dabei einen gesteuerten schrittweisen Übergang 
+			haben will. 
+			Transitions erzeugt man, indem man zuerst eine transition: Zeile in sein HTML-Element packt, in der dann angegeben wird wie lange die einzelnen Transitions 
+			dauern soll. Wenn man den Wert nicht angibt, wird meistens 0 für den Wert genommen. 
+			<code>transition: width 0.5s, height 1s, background-color 2s, transform 3s;</code> 
+			In diesem Beispiel soll der Übergang für die Breite eine halbe Sekunde dauern, der Höhenübergang vom Element 1 Sekunde, der Farbwechsel 2 Sekunden und der Transformbefehl 3 Sekunden 
+			In ein zweites HTML-Element (z.B. eine Pseudoklasse) schreibt man dann welche Werte sich verändern sollen.
+			</p>
 
-			:playing(Wenn ein abspielbares Element am abspielen ist) <br><br>
-			Man muss jedoch darauf aufpassen, dass die Pseudoklassen supportet werden, beispielweise wird  :playing nur von Apple supportet. <br><br>
-			Die Pseudoklasse wird hinter ein HTML-Element geschrieben <br>
-			div:hover {  }  <br>
-			<br>
-			Zusätzlich bieten Transitions noch zusätzlich Funktionen an, um Übergänge besser zu kontrollieren <br><br>
+			<p>
+			Wie löst man Transitions aus? 
+			Eine Möglichkeit Transitions auszulösen sind “Pseudoklassen”, welche hinter das zweites HTML-Element geschrieben werden.
+			Beispiele für Pseudoklassen sind:
+			<code>:hover</code>(die Maus hovert über dem Element)
+			<code>:checked</code>(Checkbox die bestätigt wurde)
+		    <code>:focus</code>(auswählbares Element das grade fokussiert wird, z.B. durch einen Mausklick)
+			<code>:playing</code>(Wenn ein abspielbares Element am abspielen ist)
+			Man muss jedoch darauf aufpassen, dass die Pseudoklassen supportet werden, beispielweise wird  :playing nur von Apple supportet. 
+			Die Pseudoklasse wird hinter ein HTML-Element geschrieben:
+			<code>div:hover {  } </code> 
+			</p>
 
-			Transition-timing-function: <br>
-			Die Transition-timing-function beschreibt wie genau der Übergang ablaufen soll. <br>
-			Mögliche Optionen sind  <br><br>
-			transition-timing-function: linear; <br>
-			Überall gleiche Geschwindigkeit. <br><br>
-			transition-timing-function: ease; <br>
-			Startet langsam und endet langsam, in der Mitte schneller <br><br>
-			transition-timing-function: ease-in;<br>
-			Startet langsam und endet schnell <br><br>
-			transition-timing-function: ease-out; <br>
-			Startet schnell und endet langsam <br><br>
-			transition-timing-function: ease-in-out; <br>
-			Ähnlich wie ease nur mit anderen Werten <br><br>
-			Außerdem gibt es die Möglichkeit Transitions zu verzögern. <br>
-			transition-delay: 3s; <br>
-			Der Anfang vom Übergang wird um 3 Sekunden verzögert<br>
-			<br>
+			<p>
+			Zusätzlich bieten Transitions noch zusätzlich Funktionen an, um Übergänge besser zu kontrollieren:
+			<code>Transition-timing-function:</code>Die Transition-timing-function beschreibt wie genau der Übergang ablaufen soll.
+			Mögliche Optionen sind:
+			<code>transition-timing-function: linear;</code>Überall gleiche Geschwindigkeit.
+			<code>transition-timing-function: ease;</code>Startet langsam und endet langsam, in der Mitte schneller
+			<code>transition-timing-function: ease-in;</code>Startet langsam und endet schnell
+			<code>transition-timing-function: ease-out;</code>Startet schnell und endet langsam
+			<code>transition-timing-function: ease-in-out;</code>Ähnlich wie ease nur mit anderen Werten
+			Außerdem gibt es die Möglichkeit Transitions zu verzögern.
+			<code>transition-delay: 3s;</code>Der Anfang vom Übergang wird um 3 Sekunden verzögert
+			</p>
 			
 		</section>
 		<section>
 			<h3>Beispiele für Transforms & Transitions</h3>
-			(Der ganze Beispielbereich wird noch einmal überarbeitet, wenn wir Zugang zu CSS haben) <br>
-			<img src="media_gerke/Bild1.png" alt="Bildbeschreibung" width="1550" height="600"><br>
-			Dieses Beispiel zeigt wie man mit transform ein Element rotiert <br>
-			Die rote Box ist “normal”, während die blaue Box um 40 Grad gedreht ist <br><br><br>
-			<img src="media_gerke/Gif1.gif" alt="gif" style="width:1248px;height:448px;"> <br>
-			Dieses Gif zeigt wie die verschiedenen transition-timing-functions aussehen können <br>
+			(Der ganze Beispielbereich wird noch einmal überarbeitet, wenn wir Zugang zu CSS haben) 
+			<figure>
+				<img src="media_gerke/Bild1.png" alt="Das Bild zeigt ein Beispiel mit rotate " width="1550" height="600">
+				<figcaption>Dieses Beispiel zeigt wie man mit transform ein Element rotiert. Die rote Box ist “normal”, während die blaue Box um 40 Grad gedreht ist</figcaption>
+			</figure>
+			
+			 <figure>
+				<img src="media_gerke/Gif1.gif" alt="ein Gif welches visuelle Beispiele für Easing Curves abspielt " style="width:1248px;height:448px;">
+				<figcaption>Dieses Gif zeigt wie die verschiedenen transition-timing-functions aussehen können</figcaption>
+			 </figure>
+			 
 		</section>
 		<section>
 			<h3>Zusammenfassung</h3>
@@ -134,15 +146,17 @@
 	</article>	
 	<footer>
 		<hr> 
-		Erstellt in der 8Uhr Gruppe von Gerke Goldhammer <br>
-		Quellen:<br>
-		https://prototypr.io/news/animation-easing-functions-explained<br>
-		https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform <br>
-		https://www.w3schools.com/css/css3_2dtransforms.asp <br>
-		https://wiki.selfhtml.org/wiki/Transform#translate <br>
-		https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes <br>
-		https://www.w3schools.com/css/css3_transitions.asp <br>
-		https://wiki.selfhtml.org/wiki/CSS/Tutorials/Animation/Transition <br>
+		Erstellt in der 8Uhr Gruppe von Gerke Goldhammer am <time datetime="2025-11-25">25. September</time><br>
+		Quellen:
+		<ul>
+			<li>https://prototypr.io/news/animation-easing-functions-explained</li>
+			<li>https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform</li>
+			<li>https://www.w3schools.com/css/css3_2dtransforms.asp</li>
+			<li>https://wiki.selfhtml.org/wiki/Transform#translate</li>
+			<li>https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes</li>
+			<li>https://www.w3schools.com/css/css3_transitions.asp</li>
+			<li>https://wiki.selfhtml.org/wiki/CSS/Tutorials/Animation/Transition</li>
+		</ul>
 	</footer>
 		
 		
