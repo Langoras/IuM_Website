@@ -2,7 +2,8 @@
 <!doctype html>
 <html lang="de">
 <head>
-	<!-- Head muss vielleicht noch mit weiteren meta Elementen ausgebaut werden -->
+	
+	<!-- <link rel="stylesheet" href="/styles.css"> -->
     <title>Textformatierung</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Luna Post">
@@ -12,11 +13,12 @@
 		 https://realfavicongenerator.net
 	-->
 
-	<link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
-	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
-	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+	<link rel="icon" type="image/png" href="media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="media_Icon/site.webmanifest" />
+	<link rel="stylesheet" href="../../style.css">
 	<!-- Orginal Filepaths 
 		<link rel="icon" type="image/png" href="/media_Icon/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/media_Icon/favicon.svg" />
@@ -24,7 +26,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/media_Icon/apple-touch-icon.png" />
 		<link rel="manifest" href="/media_Icon/site.webmanifest" />
 	-->
-	<link rel="stylesheet" href="../../style.css">
 	
 </head>
 <body>
@@ -35,9 +36,9 @@
 			<li><a href="../../index.html">Home</a></li>
 			<li><a href="../Daisy_data/Integration.html">Integration</a></li>
 			<li><a href="../Houssem_data/Syntax.html">Syntax</a></li>
-			<li><a href="Textformatierung.html">Textformatierung</a><!-- Link-Beispiel für Datei im selbem Ordner zum testen--></li>
+			<li><a href="textformatierung.html">Textformatierung</a><!-- Link-Beispiel für Datei im selbem Ordner zum testen--></li>
 			<li><a href="../Alexander_data/Flexbox.html">Flexbox</a></li>
-			<li><a href="../Jaylan_data/CSS.html">Buttons</a></li>
+			<li><a href="../Jaylan_data/Buttons.html">Buttons</a></li>
 			<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
 			<li><a href="../Abdel_data/Frameworks.html">Frameworks</a></li>
 			</ul>
@@ -49,10 +50,12 @@
 			<h2>Textformatierung mit CSS</h2>
 		<section>
 			<h3>Was ist Textformatierung?</h3>
+			<p>
 			Textformatierung meint die Änderung der Darstellung von Text, um die Lesbarkeit
 			zu verbessern und einen Text optisch ansprechender zu gestalten. Es gibt verschiedene 
 			Möglichkeiten, mit denen man das erreichen kann.
-			<br>Zum Beispiel über die:
+			Zum Beispiel über die:
+			</p>
 			<ul>
 					<li>SchriftART</li>
 					<li>SchriftGRÖßE</li>
@@ -61,108 +64,135 @@
 					<li>Zeilenabstände</li>
 					<li>Hervorhebungen</li>
 			</ul> 
+        </section>
+        <section>
 			<h3>Warum ist die Textgestaltung wichtig?</h3>
+			<p>
 			Eine übersichtliche und ansprechende Textgestaltung ist außerordentlich wichtig für 
 			den Aufbau einer Website. Sie beeinflusst neben der besseren Lesbarkeit
 			zusätzlich auch, wie gut Informationen an den Leser vermittelt werden.
-			<br>
 			BEISPIEL:
-			<br>
+			</p>
+			<p>
 			D e r Z e i c h e n a b s t a n d z . B . s p i e l t o f f e n s i c h t l i c h 
 			e i n e w i c h t i g e R o l l e b e i d e r A u f n a h m e v o n I n f o r m a t i o n e n.
-			<br> <br>
+			</p>
+			<p>
 			Schon kleine Anpassungen können die Wahrnehmung eines Textes deutlich verbessern.
 			Ohne diese Gestaltungsmerkmale wirkt ein Text schnell unübersichtlich und ist anstrengend 
 			zu lesen. Die Textformatierung spielt also eine wichtige Rolle für ein gutes Nutzererlebnis auf einer 
 			Website.
-			<br>
+			</p>
+			<p>
 			Der folgende Abschnitt handelt davon, wie man mit CSS Texte 
 			formatiert. Anhand von Beispielen werden die verschiedenen Möglichkeiten 
 			der Gestaltung erklärt.
+			</p>
 		</section>
 		<section>
 			<h3>Umsetzung der Textformatierung</h3>
-			In dem Abschnitt <a href="integration.html">Integration von CSS</a> wurde bereits erarbeitet, dass
-			es drei übliche Wege gibt um CSS in eine HTML-Datei einzubinden.<!--????--> Im Folgenden wird 
-			vorrausgesezt, dass mit einem externen Style-Sheet 
+            <p>
+			In dem Abschnitt <a href="../Daisy_data/Integration_daisy.html">Integration von CSS</a> wurde bereits erarbeitet, dass
+			es drei übliche Wege gibt um CSS in eine HTML-Datei einzubinden. Im Folgenden wird 
+			vorrausgesetzt, dass mit einem externen Style-Sheet 
 			gearbeitet wird.
-			<br>
+			</p>
+            <p>
 			Bei der Formatierung von Text werden Eigenschaften in CSS genutzt, die gezielt das Aussehen/die optische
-			Darstellung der Schrift eines Elements(??) verändern. 
-			<br>
+			Darstellung der Schrift eines Elements verändern. 
+			</p>
+            <p>
 			Dabei ist der Ablauf immer gleich:
-			<br><br>
+            </p>
+			<p>
 			Erst wird ein Element ausgewählt, welches optisch verändert werden soll, z.B. alle Sections (section), 
-			Überschriften (h1-h6<!--h6?-->) oder eine bestimmte Klasse wie ".box". 
-			<br>
+			Überschriften (h1-h6) oder eine bestimmte Klasse wie ".box". 
+			</p>
+            <p>
 			Danach wird festgelegt, wie der ausgewählte Text nachher aussehen soll. Hierfür gibt es eigene CSS-Eigenschaften 
 			wie zum Beispiel "font-size" auf die nachfolgend noch eingegangen wird. Diese Eigenschaften werden nachfolgend nur noch
 			spezifiziert, indem individuelle Werte wie z.B. eine Schriftgröße ausgewählt wird.
-			<br>
+			</p>
+            <p>
 			HIER WIRD NOCH EIN BEISPIEL FÜR DIESEN ABLAUF EINGEFÜGT
-
+			</p>
 			<h4>1.Schriftart</h4>
+			<p>
 			Die Darstellung der Schriftart kann in CSS mit "font-family" bestimmt werden. 
-			<br>
-			BEISPIEL CSS
-			<br>
+			<p>
+			Diese Beispiel zeigt den Text in der Schriftart PLATZHALTER.
+			</p>
 			In der praktischen Nutzung werden häufig mehrere Schriften angegeben, falls eine beim Nutzer nicht vorhanden
 			ist.
-
+			</p>
 			<h4>2.Schriftgröße</h4>
+			<p>
 			Mit "font-size" wird die Schriftgröße festgelegt. Hiermit wird die Hierarchie und Lesbarkeit beeinflusst.
-			<br>
+			<p>
 			BEISPIEL CSS
-			<br>
+			</p>
 			Als Einheiten werden hier px, em oder rem verwendet.
-
+			</p>
 			<h4>3.Schriftfarbe</h4>
+			<p>
 			Um die Schrift farblich zu gestalten wird "color" verwendet. Um eine Farbe festzulegen wird entweder der Farbname, 
 			der Hex-Wert oder der RGB-Wert genutzt.
-			<br>
+			<p>
 			BEISPIEL CSS
-
+			</p>
+			</p>
 			<h4>4.Absätze & Außenabstände</h4>
+			<p>
 			Für die Übersichtlichkeit sollte auf die Trennung von Texten mit Absätzen geachtet werden.
 			Dafür wird "margin" angewendet.
-			<br>
+			<p>
 			BEISPIEL CSS
-			<br>
+			</p>
 			Hiermit können auch Abstände in alle Richtungen verändert werden.
-
+			</p>
 			<h4>5.Zeilenabstände</h4>
+			<p>
 			Mit diesem Wert wird beeinflusst, wie viel Platz zwischen den Zeilen liegt. Dies beeinflusst deutlich die 
 			Lesbarkeit.
-			<br>
+			<p>
 			BEISPIEL CSS line-height
-
+			</p>
+			</p>
 			<h4>6.Hervorhebungen</h4>
+			<p>
 			Mit "font-weight", "text-decoration" oder "font-style" kann ein Text besonders hervorgehoben werden, indem er fett,
-			kursiv oder unterschrichen wird.
-			<br>
+			kursiv oder unterstrichen wird.
+			<p>
 			BEISPIEL CSS
-			<br>
+			</p>
+            </p>
+            <!--
 			<img src="Bild.png" alt="Bildbeschreibung" width="450" height="400">
-			<br>
 			<img src="Bild2.png" alt="Bildbeschreibung" width="450" height="400">
+            -->
 		</section>
 		<section>
+            
 			<h3>Zusammenfassung</h3>
+			<p>
 			Unter Textformatierung versteht man alle Maßnahmen, die das Erscheinungsbild von Text
 			beeinflussen.Ob die Wahl der Schriftart, der Größe, der Farbe oder
 			der Abstände zwischen einzelnen Elementen. Eine gut abgestimmte 
 			Gestaltung trägt viel zur Lesbarkeit bei und hilft dabei, 
 			Inhalte klarer zu vermitteln. Bereits kleine Justierungen, zum Beispiel beim
 			Zeilen- oder Zeichenabstand, können den Eindruck eines Textes deutlich verbessern.
-			<br><br>
+            </p>
+			<p>
 			Für die Umsetzung in CSS wird zuerst das HTML-Element ausgewählt, dessen Darstellung 
 			angepasst werden soll. Danach werden die passenden Eigenschaften mit individuellen
 			Werten festgelegt. Diese Einstellungen werden in einem externen Stylesheet hinterlegt 
 			und gelten anschließend automatisch für alle ausgewählten Elemente.
-			<br>
+			</p>
+            <p>
 			Hier die wichtigsten Erkenntnisse auf einen Blick:
+			</p>
 			<ul>
-			<li>Wie ein Text formatiert ist trägt maßgeblich zur guten Lesbarkeit und somit zu einer interesannten Website bei.</li>
+			<li>Wie ein Text formatiert ist trägt maßgeblich zur guten Lesbarkeit und somit zu einer interessannten Website bei.</li>
 			<li>Mithilfe von CSS kann ein Text sehr viel gestaltet werden.</li>
 			<li>font-family -> Schriftart</li>
 			<li>font-size -> Schriftgröße</li>
@@ -175,7 +205,8 @@
 	</article>	
 	<footer>
 		<hr> 
-		Erstellt in der 8Uhr Gruppe von Luna Post   
+		Erstellt in der 8Uhr Gruppe von Luna Post 
+		<time datetime="2025-12-02">am 02.12.2025</time>  
 	</footer>
 		
 		
