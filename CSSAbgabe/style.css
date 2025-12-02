@@ -187,3 +187,8 @@ pre{
     padding: 1em 3em 1em 4em;
 }
 
+/* Neutraler Container für die Karten */
+.CardSection {
+    all: unset;
+    display: block;
+}
