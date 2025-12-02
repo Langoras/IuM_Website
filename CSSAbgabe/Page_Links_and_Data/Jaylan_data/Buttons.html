@@ -104,20 +104,49 @@
             </table>
         </section>
 
-        <section>
-            <h3>Beispiel-CSS</h3>
-            <pre><code>.button{
+  <section>
+    <h3>Beispiel 1</h3>
+    <div class="example-box">
+        <pre><code>.button{
     background-color: red;
     border: none;
-    color: whith;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 6px;
 }</code></pre>
-        </section>
+        <button class="button">Klick mich!</button>
+    </div>
+
+    <h3>Beispiel 2</h3>
+    <div class="example-box">
+        <pre><code>.button-green{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}</code></pre>
+        <button class="button-green">Drück mich!</button>
+        <pre><code>
+    Für denn Hover-/ und Drückeffeckt 
+    .button-green:hover {
+        background-color: darkgreen;
+    }
+
+    .button-green:active {
+        transform: translateY(4px);
+        box-shadow: 0 1px #b22222;
+    }
+</code></pre>
+    </div>
+</section>
 
         <section>
             <h3>Was wir bis jetzt gelernt haben</h3>
