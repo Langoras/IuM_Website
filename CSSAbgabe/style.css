@@ -13,6 +13,7 @@
     --blue-soft: #d4e4ff;
     --blue-border: #b8d2ff;
     --blue-text:  #2a4f8a;
+    --blue-heavy: #597fbd;
 }
 
 /* -------------------------------------------------- */
@@ -46,6 +47,17 @@ h1 {
     margin: 20px 0 10px;
     letter-spacing: 0.5px;
     color: var(--blue-text);
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--blue-border);
+    background: var(--blue-heavy);
+    border-radius: 8px;
+
 }
 
 section p {
@@ -119,3 +131,28 @@ footer{
     border-radius: 8px;
 
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;   /* verhindert doppelte Rahmen */
+    margin: 20px 0;
+    background: var(--blue-light);
+    border: 1px solid var(--blue-border);
+    border-radius: 6px;
+    overflow: hidden;            /* sorgt dafür, dass die Rundung sichtbar bleibt */
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--blue-border);
+    text-align: left;
+    color: var(--blue-text);
+}
+
+th {
+    background: var(--blue-heavy);
+    color: white;
+    font-weight: 600;
+}
+
+
