@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<!-- Header muss vielleicht noch mit weiteren meta Elementen ausgebaut werden -->
+	<title>Transforms & Transitions</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Gerke Goldhammer">
+	<meta name="description" content="CSS Einführung ins Thema Transform & Transitions">
+
+	<!-- Favicon erstellt mit
+		 https://realfavicongenerator.net
+	-->
+
+	<link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+	<!-- Orginal Filepaths 
+		<link rel="icon" type="image/png" href="/media_Icon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/media_Icon/favicon.svg" />
+		<link rel="shortcut icon" href="/media_Icon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/media_Icon/apple-touch-icon.png" />
+		<link rel="manifest" href="/media_Icon/site.webmanifest" />
+	-->
+	<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+	<header>
+		<h1>Cascading Style Sheets (CSS)</h1>
+		<nav>
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
+				<li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+				<li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+				<li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+				<li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+				<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
+				<li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+			</ul>
+		</nav>
+		<hr>
+	</header>
+
+	<article>
+		<h2>Transforms & Transitions</h2>
+		<section>
+			<h3>Einleitung </h3>
+			<p>
+				Dieser Artikel bringt ihnen näher wie man mit den CSS-Funktionen
+				Tansform & Transition HTML-Elemente verändern kann.
+				Mit Transform-Befehlen kann man Elemente bewegen, verzerren, rotieren und in verschiedene Richtungen
+				skalieren.
+				Mithilfe von Transition-Befehlen kann man die Übergänge zwischen zwei Zuständen eines Elementes
+				kontrollieren.
+			</p>
+		</section>
+		<section>
+			<h3>Erklärung zu Transforms & Transitions</h3>
+			<p>
+				Zuerst gucken wir uns Transform an:
+				Mit transform: translate können wir ein Element verschieben:
+				<code>transform: translate(X-wert,y-wert) </code>
+				Der Wert wird in px(pixel) angeben kann aber auch in % angegeben werden
+			</p>
+
+			<p>
+				Mit transform: rotate rotieren wir einen Wert im Uhrzeigersinn.
+				Der übergebene Wert wird kann entweder deg(degrees) oder in turn angeben werden. Zudem kann man gegen
+				den Uhrzeigersinn rotieren,
+				wenn man einen negativen Wert angibt.
+				<code>transform: rotate(Winkel)</code>
+				Zudem kann man in 3D rotieren indem mit rotateX(),rotateY() und rotateZ() um die entsprechende Achse
+				rotiert.
+			</p>
+
+			<p>
+				Mit transform:scale beeinflussen wir die Größe eines Objektes.
+				<code>transform: scale(x-Wert,y-Wert) </code>
+				Man kann auch mit scaleX() oder scaleY() jeweils nur einen Wert verändern.
+			</p>
+
+			<p>
+				Mit transform:skew verzerren wir ein Objekt anhand der X und Y Achse.
+				<code>transform: skew(x-Winkel,y-Winkel)</code>
+				Die Werte werden wieder deg(degrees) angegeben, zudem kann wie bei transform:scale auch nur die
+				einzelnen Werte verändern,
+				indem man skewX() oder skewY() benutzt.
+				Außerdem kann man mehrere Transformfunktionen kombinieren und auf einmal verwenden, allerdings sollte
+				man auf die Reihenfolge achten.
+			</p>
+
+			<p>
+				Die Transforms könnte man zum Beispiel mit Transitions kombinieren um ein Element auf ihrer Seite zu
+				“animieren”.
+				Transitions werden verwendet, wenn man den Zustand (sprich Position etc.) eines Elements verändert und
+				dabei einen gesteuerten schrittweisen Übergang
+				haben will.
+				Transitions erzeugt man, indem man zuerst eine transition: Zeile in sein HTML-Element packt, in der dann
+				angegeben wird wie lange die einzelnen Transitions
+				dauern soll. Wenn man den Wert nicht angibt, wird meistens 0 für den Wert genommen.
+				<code>transition: width 0.5s, height 1s, background-color 2s, transform 3s;</code>
+				In diesem Beispiel soll der Übergang für die Breite eine halbe Sekunde dauern, der Höhenübergang vom
+				Element 1 Sekunde, der Farbwechsel 2 Sekunden und der Transformbefehl 3 Sekunden
+				In ein zweites HTML-Element (z.B. eine Pseudoklasse) schreibt man dann welche Werte sich verändern
+				sollen.
+			</p>
+
+			<p>
+				Wie löst man Transitions aus?
+				Eine Möglichkeit Transitions auszulösen sind “Pseudoklassen”, welche hinter das zweites HTML-Element
+				geschrieben werden.
+				Beispiele für Pseudoklassen sind:
+				<code>:hover</code>(die Maus hovert über dem Element)
+				<code>:checked</code>(Checkbox die bestätigt wurde)
+				<code>:focus</code>(auswählbares Element das grade fokussiert wird, z.B. durch einen Mausklick)
+				<code>:playing</code>(Wenn ein abspielbares Element am abspielen ist)
+				Man muss jedoch darauf aufpassen, dass die Pseudoklassen supportet werden, beispielweise wird :playing
+				nur von Apple supportet.
+				Die Pseudoklasse wird hinter ein HTML-Element geschrieben:
+				<code>div:hover {  } </code>
+			</p>
+
+			<p>
+				Zusätzlich bieten Transitions noch zusätzlich Funktionen an, um Übergänge besser zu kontrollieren:
+				<code>Transition-timing-function:</code>Die Transition-timing-function beschreibt wie genau der Übergang
+				ablaufen soll.
+				Mögliche Optionen sind:
+				<code>transition-timing-function: linear;</code>Überall gleiche Geschwindigkeit.
+				<code>transition-timing-function: ease;</code>Startet langsam und endet langsam, in der Mitte schneller
+				<code>transition-timing-function: ease-in;</code>Startet langsam und endet schnell
+				<code>transition-timing-function: ease-out;</code>Startet schnell und endet langsam
+				<code>transition-timing-function: ease-in-out;</code>Ähnlich wie ease nur mit anderen Werten
+				Außerdem gibt es die Möglichkeit Transitions zu verzögern.
+				<code>transition-delay: 3s;</code>Der Anfang vom Übergang wird um 3 Sekunden verzögert
+			</p>
+
+		</section>
+		<section>
+			<h3>Beispiele für Transforms & Transitions</h3>
+			(Der ganze Beispielbereich wird noch einmal überarbeitet, wenn wir Zugang zu CSS haben)
+			<figure>
+				<img src="media_gerke/Bild1.png" alt="Das Bild zeigt ein Beispiel mit rotate " width="1550"
+					height="600">
+				<figcaption>Dieses Beispiel zeigt wie man mit transform ein Element rotiert. Die rote Box ist “normal”,
+					während die blaue Box um 40 Grad gedreht ist</figcaption>
+			</figure>
+
+			<figure>
+				<img src="media_gerke/Gif1.gif" alt="ein Gif welches visuelle Beispiele für Easing Curves abspielt "
+					style="width:1248px;height:448px;">
+				<figcaption>Dieses Gif zeigt wie die verschiedenen transition-timing-functions aussehen können
+				</figcaption>
+			</figure>
+
+		</section>
+		<section>
+			<h3>Zusammenfassung</h3>
+			<ul>
+				<li>Sie sind in der Lage Elemente verschieben</li>
+				<li>Sie können Elemente skalieren und rotieren (sowohl in 2D als auch in 3D) </li>
+				<li>Sie wissen wie man Übergänge erzeugt </li>
+				<li>Sie können das Verhalten von Übergängen kontrollieren </li>
+				<li>Sie können Transitions mit Transform verbinden</li>
+			</ul>
+		</section>
+	</article>
+	<footer>
+		<hr>
+		Erstellt in der 8Uhr Gruppe von Gerke Goldhammer am <time datetime="2025-11-25">25. September</time><br>
+		Quellen:
+		<ul>
+			<li>https://prototypr.io/news/animation-easing-functions-explained</li>
+			<li>https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform</li>
+			<li>https://www.w3schools.com/css/css3_2dtransforms.asp</li>
+			<li>https://wiki.selfhtml.org/wiki/Transform#translate</li>
+			<li>https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes</li>
+			<li>https://www.w3schools.com/css/css3_transitions.asp</li>
+			<li>https://wiki.selfhtml.org/wiki/CSS/Tutorials/Animation/Transition</li>
+		</ul>
+	</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+/* -------------------------------------------------- */
+/* Reset & Variablen                                   */
+/* -------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-light: #e9f2ff;
+    --blue-soft: #d4e4ff;
+    --blue-border: #b8d2ff;
+    --blue-text:  #2a4f8a;
+}
+
+/* -------------------------------------------------- */
+/* Grundstruktur                                       */
+/* -------------------------------------------------- */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* -------------------------------------------------- */
+/* Typografie                                          */
+/* -------------------------------------------------- */
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0 10px;
+    letter-spacing: 0.5px;
+    color: var(--blue-text);
+}
+
+section p {
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------- */
+/* Navigation                                          */
+/* -------------------------------------------------- */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--blue-text);
+    font-weight: 500;
+    padding: 8px 14px;
+    border: 1px solid var(--blue-border);
+    background: var(--blue-light);
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: var(--blue-soft);
+}
+
+/* -------------------------------------------------- */
+/* Content / Sections                                  */
+/* -------------------------------------------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--blue-border);
+    background: var(--blue-light);
+    border-radius: 8px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* gesamte Liste zentriert */
+    gap: 10px;
+    margin: 0 auto;        /* UL selbst wird auf der Seite zentriert */
+}
+
+.list li {
+    width: 100%;           /* sorgt dafür, dass der Text sich links ausrichten kann */
+    text-align: left;      /* eigentlicher linksbündiger Text */
+}

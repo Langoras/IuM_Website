@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+	<!-- Head muss vielleicht noch mit weiteren meta Elementen ausgebaut werden -->
+    <title>Textformatierung</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Luna Post">
+	<meta name="description" content="CSS Einführung ins Thema Textformatierung">
+
+	<!-- Favicon erstellt mit
+		 https://realfavicongenerator.net
+	-->
+
+	<link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+	<!-- Orginal Filepaths 
+		<link rel="icon" type="image/png" href="/media_Icon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/media_Icon/favicon.svg" />
+		<link rel="shortcut icon" href="/media_Icon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/media_Icon/apple-touch-icon.png" />
+		<link rel="manifest" href="/media_Icon/site.webmanifest" />
+	-->
+	<link rel="stylesheet" href="../../style.css">
+	
+</head>
+<body>
+	<header>
+        <h1>Cascading Style Sheets (CSS)</h1>
+        <nav>
+			<ul>
+			<li><a href="../../index.html">Home</a></li>
+			<li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
+			<li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+			<li><a href="textformatierung.html">Textformatierung</a><!-- Link-Beispiel für Datei im selbem Ordner zum testen--></li>
+			<li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+			<li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+			<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
+			<li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+			</ul>
+        </nav>
+		<hr>	
+    </header>
+	
+	<article>
+		<section>
+			<h2>Textformatierung mit CSS</h2>
+		</section>
+		<section>
+			<h3>Was ist Textformatierung?</h3>
+			Textformatierung meint die Änderung der Darstellung von Text, um die Lesbarkeit
+			zu verbessern und einen Text optisch ansprechender zu gestalten. Es gibt verschiedene 
+			Möglichkeiten, mit denen man das erreichen kann.
+			<br>Zum Beispiel über die:
+			<ul>
+					<li>SchriftART</li>
+					<li>SchriftGRÖßE</li>
+					<li>SchriftFARBE</li>
+					<li>Absätze</li>
+					<li>Zeilenabstände</li>
+					<li>Hervorhebungen</li>
+			</ul> 
+			<h3>Warum ist die Textgestaltung wichtig?</h3>
+			Eine übersichtliche und ansprechende Textgestaltung ist außerordentlich wichtig für 
+			den Aufbau einer Website. Sie beeinflusst neben der besseren Lesbarkeit
+			zusätzlich auch, wie gut Informationen an den Leser vermittelt werden.
+			<br>
+			BEISPIEL:
+			<br>
+			D e r Z e i c h e n a b s t a n d z . B . s p i e l t o f f e n s i c h t l i c h 
+			e i n e w i c h t i g e R o l l e b e i d e r A u f n a h m e v o n I n f o r m a t i o n e n.
+			<br> <br>
+			Schon kleine Anpassungen können die Wahrnehmung eines Textes deutlich verbessern.
+			Ohne diese Gestaltungsmerkmale wirkt ein Text schnell unübersichtlich und ist anstrengend 
+			zu lesen. Die Textformatierung spielt also eine wichtige Rolle für ein gutes Nutzererlebnis auf einer 
+			Website.
+			<br>
+			Der folgende Abschnitt handelt davon, wie man mit CSS Texte 
+			formatiert. Anhand von Beispielen werden die verschiedenen Möglichkeiten 
+			der Gestaltung erklärt.
+		</section>
+		<section>
+			<h3>Umsetzung der Textformatierung</h3>
+			In dem Abschnitt <a href="integration.html">Integration von CSS</a> wurde bereits erarbeitet, dass
+			es drei übliche Wege gibt um CSS in eine HTML-Datei einzubinden.<!--????--> Im Folgenden wird 
+			vorrausgesezt, dass mit einem externen Style-Sheet 
+			gearbeitet wird.
+			<br>
+			Bei der Formatierung von Text werden Eigenschaften in CSS genutzt, die gezielt das Aussehen/die optische
+			Darstellung der Schrift eines Elements(??) verändern. 
+			<br>
+			Dabei ist der Ablauf immer gleich:
+			<br><br>
+			Erst wird ein Element ausgewählt, welches optisch verändert werden soll, z.B. alle Sections (section), 
+			Überschriften (h1-h6<!--h6?-->) oder eine bestimmte Klasse wie ".box". 
+			<br>
+			Danach wird festgelegt, wie der ausgewählte Text nachher aussehen soll. Hierfür gibt es eigene CSS-Eigenschaften 
+			wie zum Beispiel "font-size" auf die nachfolgend noch eingegangen wird. Diese Eigenschaften werden nachfolgend nur noch
+			spezifiziert, indem individuelle Werte wie z.B. eine Schriftgröße ausgewählt wird.
+			<br>
+			HIER WIRD NOCH EIN BEISPIEL FÜR DIESEN ABLAUF EINGEFÜGT
+
+			<h4>1.Schriftart</h4>
+			Die Darstellung der Schriftart kann in CSS mit "font-family" bestimmt werden. 
+			<br>
+			BEISPIEL CSS
+			<br>
+			In der praktischen Nutzung werden häufig mehrere Schriften angegeben, falls eine beim Nutzer nicht vorhanden
+			ist.
+
+			<h4>2.Schriftgröße</h4>
+			Mit "font-size" wird die Schriftgröße festgelegt. Hiermit wird die Hierarchie und Lesbarkeit beeinflusst.
+			<br>
+			BEISPIEL CSS
+			<br>
+			Als Einheiten werden hier px, em oder rem verwendet.
+
+			<h4>3.Schriftfarbe</h4>
+			Um die Schrift farblich zu gestalten wird "color" verwendet. Um eine Farbe festzulegen wird entweder der Farbname, 
+			der Hex-Wert oder der RGB-Wert genutzt.
+			<br>
+			BEISPIEL CSS
+
+			<h4>4.Absätze & Außenabstände</h4>
+			Für die Übersichtlichkeit sollte auf die Trennung von Texten mit Absätzen geachtet werden.
+			Dafür wird "margin" angewendet.
+			<br>
+			BEISPIEL CSS
+			<br>
+			Hiermit können auch Abstände in alle Richtungen verändert werden.
+
+			<h4>5.Zeilenabstände</h4>
+			Mit diesem Wert wird beeinflusst, wie viel Platz zwischen den Zeilen liegt. Dies beeinflusst deutlich die 
+			Lesbarkeit.
+			<br>
+			BEISPIEL CSS line-height
+
+			<h4>6.Hervorhebungen</h4>
+			Mit "font-weight", "text-decoration" oder "font-style" kann ein Text besonders hervorgehoben werden, indem er fett,
+			kursiv oder unterschrichen wird.
+			<br>
+			BEISPIEL CSS
+			<br>
+			<img src="Bild.png" alt="Bildbeschreibung" width="450" height="400">
+			<br>
+			<img src="Bild2.png" alt="Bildbeschreibung" width="450" height="400">
+		</section>
+		<section>
+			<h3>Zusammenfassung</h3>
+			Unter Textformatierung versteht man alle Maßnahmen, die das Erscheinungsbild von Text
+			beeinflussen.Ob die Wahl der Schriftart, der Größe, der Farbe oder
+			der Abstände zwischen einzelnen Elementen. Eine gut abgestimmte 
+			Gestaltung trägt viel zur Lesbarkeit bei und hilft dabei, 
+			Inhalte klarer zu vermitteln. Bereits kleine Justierungen, zum Beispiel beim
+			Zeilen- oder Zeichenabstand, können den Eindruck eines Textes deutlich verbessern.
+			<br><br>
+			Für die Umsetzung in CSS wird zuerst das HTML-Element ausgewählt, dessen Darstellung 
+			angepasst werden soll. Danach werden die passenden Eigenschaften mit individuellen
+			Werten festgelegt. Diese Einstellungen werden in einem externen Stylesheet hinterlegt 
+			und gelten anschließend automatisch für alle ausgewählten Elemente.
+			<br>
+			Hier die wichtigsten Erkenntnisse auf einen Blick:
+			<ul>
+			<li>Wie ein Text formatiert ist trägt maßgeblich zur guten Lesbarkeit und somit zu einer interesannten Website bei.</li>
+			<li>Mithilfe von CSS kann ein Text sehr viel gestaltet werden.</li>
+			<li>font-family -> Schriftart</li>
+			<li>font-size -> Schriftgröße</li>
+			<li>color -> Schriftfarbe</li>
+			<li>margin -> Absätze & Außenabstände</li>
+			<li>line-height -> Zeilenabstände</li>
+			<li>font-weight, text-decoration oder font-style -> Hervorhebungen</li>
+			</ul>
+		</section>
+	</article>	
+	<footer>
+		<hr> 
+		Erstellt in der 8Uhr Gruppe von Luna Post   
+	</footer>
+		
+		
+</body>
+</html>
