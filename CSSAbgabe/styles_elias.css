@@ -39,7 +39,7 @@
 
     /* Vorbereitung für JS Fly-In */
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(-100px);
 }
 
 /* Hover animations */
