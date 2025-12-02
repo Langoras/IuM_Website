@@ -110,6 +110,11 @@ section {
     border-radius: 8px;
 }
 
+ul {
+    padding: 1em;
+}
+
+
 .list {
     display: flex;
     flex-direction: column;
