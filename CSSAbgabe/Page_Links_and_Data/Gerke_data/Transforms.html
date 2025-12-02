@@ -25,6 +25,7 @@
 		<link rel="manifest" href="/media_Icon/site.webmanifest" />
 	-->
 	<link rel="stylesheet" href="../../style.css">
+	<link rel="stylesheet" href="styles_gerke.css">
 
 </head>
 
@@ -79,7 +80,7 @@
 			</p>
 
 			<p>
-				Mit transform:scale beeinflussen wir die Größe eines Objektes.
+				Mit transform:scale beeinflussen wir die Größe eines Objektes:
 				<code>transform: scale(x-Wert,y-Wert) </code>
 				Man kann auch mit scaleX() oder scaleY() jeweils nur einen Wert verändern.
 			</p>
@@ -103,7 +104,7 @@
 				Transitions erzeugt man, indem man zuerst eine transition: Zeile in sein HTML-Element packt, in der dann
 				angegeben wird wie lange die einzelnen Transitions
 				dauern soll. Wenn man den Wert nicht angibt, wird meistens 0 für den Wert genommen.
-				<code>transition: width 0.5s, height 1s, background-color 2s, transform 3s;</code>
+				<code class="codeStarkeTrennung">transition: width 0.5s, height 1s, background-color 2s, transform 3s;</code>
 				In diesem Beispiel soll der Übergang für die Breite eine halbe Sekunde dauern, der Höhenübergang vom
 				Element 1 Sekunde, der Farbwechsel 2 Sekunden und der Transformbefehl 3 Sekunden
 				In ein zweites HTML-Element (z.B. eine Pseudoklasse) schreibt man dann welche Werte sich verändern
@@ -115,10 +116,10 @@
 				Eine Möglichkeit Transitions auszulösen sind “Pseudoklassen”, welche hinter das zweites HTML-Element
 				geschrieben werden.
 				Beispiele für Pseudoklassen sind:
-				<code>:hover</code>(die Maus hovert über dem Element)
-				<code>:checked</code>(Checkbox die bestätigt wurde)
-				<code>:focus</code>(auswählbares Element das grade fokussiert wird, z.B. durch einen Mausklick)
-				<code>:playing</code>(Wenn ein abspielbares Element am abspielen ist)
+				<code class="codeStarkeTrennung">:hover</code>(die Maus hovert über dem Element)
+				<code class="codeStarkeTrennung">:checked</code>(Checkbox die bestätigt wurde)
+				<code class="codeStarkeTrennung">:focus</code>(auswählbares Element das grade fokussiert wird, z.B. durch einen Mausklick)
+				<code class="codeStarkeTrennung">:playing</code>(Wenn ein abspielbares Element am abspielen ist)
 				Man muss jedoch darauf aufpassen, dass die Pseudoklassen supportet werden, beispielweise wird :playing
 				nur von Apple supportet.
 				Die Pseudoklasse wird hinter ein HTML-Element geschrieben:
@@ -127,35 +128,52 @@
 
 			<p>
 				Zusätzlich bieten Transitions noch zusätzlich Funktionen an, um Übergänge besser zu kontrollieren:
-				<code>Transition-timing-function:</code>Die Transition-timing-function beschreibt wie genau der Übergang
+				<code class="codeStarkeTrennung">Transition-timing-function:</code>Die Transition-timing-function beschreibt wie genau der Übergang
 				ablaufen soll.
 				Mögliche Optionen sind:
-				<code>transition-timing-function: linear;</code>Überall gleiche Geschwindigkeit.
-				<code>transition-timing-function: ease;</code>Startet langsam und endet langsam, in der Mitte schneller
-				<code>transition-timing-function: ease-in;</code>Startet langsam und endet schnell
-				<code>transition-timing-function: ease-out;</code>Startet schnell und endet langsam
-				<code>transition-timing-function: ease-in-out;</code>Ähnlich wie ease nur mit anderen Werten
+				<code class="codeStarkeTrennung">transition-timing-function: linear;</code>Überall gleiche Geschwindigkeit.
+				<code class="codeStarkeTrennung">transition-timing-function: ease;</code>Startet langsam und endet langsam, in der Mitte schneller
+				<code class="codeStarkeTrennung">transition-timing-function: ease-in;</code>Startet langsam und endet schnell
+				<code class="codeStarkeTrennung">transition-timing-function: ease-out;</code>Startet schnell und endet langsam
+				<code class="codeStarkeTrennung">transition-timing-function: ease-in-out;</code>Ähnlich wie ease nur mit anderen Werten
 				Außerdem gibt es die Möglichkeit Transitions zu verzögern.
-				<code>transition-delay: 3s;</code>Der Anfang vom Übergang wird um 3 Sekunden verzögert
+				<code class="codeStarkeTrennung">transition-delay: 3s;</code>Der Anfang vom Übergang wird um 3 Sekunden verzögert
 			</p>
 
 		</section>
 		<section>
 			<h3>Beispiele für Transforms & Transitions</h3>
-			(Der ganze Beispielbereich wird noch einmal überarbeitet, wenn wir Zugang zu CSS haben)
 			<figure>
-				<img src="media_gerke/Bild1.png" alt="Das Bild zeigt ein Beispiel mit rotate " width="85%"
-					height="50%">
+				<img src="media_gerke/Bild1.png" alt="Das Bild zeigt ein Beispiel mit rotate " width="85%" height="50%">
 				<figcaption>Dieses Beispiel zeigt wie man mit transform ein Element rotiert. Die rote Box ist “normal”,
 					während die blaue Box um 40 Grad gedreht ist</figcaption>
 			</figure>
 
 			<figure>
-				<img src="media_gerke/Gif1.gif" alt="ein Gif welches visuelle Beispiele für Easing Curves abspielt "width="85%"
-					height="50%">
+				<img src="media_gerke/Gif1.gif" alt="ein Gif welches visuelle Beispiele für Easing Curves abspielt "
+					width="85%" height="50%">
 				<figcaption>Dieses Gif zeigt wie die verschiedenen transition-timing-functions aussehen können
 				</figcaption>
 			</figure>
+			<div class="grid-container">
+				
+				<div class="Box"> Dies ist eine Box</div>
+				<div class="VerzerrteBox">Dies ist eine mit transform skew verzerrte Box</div>
+				<div class="RotierteBox">Dies ist eine mit transform rotate rotierte Box</div>
+			</div>
+			<div class="HoverBeispiel">Dies ist ein Beispiel für die PseudoKlasse Hover</div>
+			
+			<span>
+				Dies ist ein Beispiel für die PseudoKlasse :Focus :<input type="text" class="FocusBeispiel"	value="HierKlicken">
+			</span>
+			<span>
+				Beispiel für PseudoKlasse :checked in Kombination mit Transform und transition :<input type="checkbox" class="CheckedBeispiel">
+			</span>
+
+			<div class="TransitionBeispiel"> Dieses Beispiel zeigt eine transition die durch hover
+				ausgelöst wird</div>
+			
+
 
 		</section>
 		<section>
