@@ -1,0 +1,140 @@
+/* ======== Karten-Layout ======== */
+
+.CardGrid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory; /* optional für smooth snapping */
+    scroll-behavior: smooth;
+}
+
+
+
+.CardGrid::-webkit-scrollbar {
+    height: 10px; /* Scrollbar sichtbar machen, wenn du willst */
+}
+
+.CardGrid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.Card {
+    min-width: 260px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .6s;
+}
+
+
+.Card h3 {
+    margin-bottom: .5rem;
+}
+
+.Card p {
+    opacity: .7;
+}
+
+/* Hover + Click Animation mit :has() */
+.CardGrid:has(.Card:hover) .Card:not(:hover) {
+    scale: .97;
+    opacity: .6;
+}
+
+.Card:is(:hover, :focus) {
+    border-color: #333;
+    scale: 1.03;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+.Card:active {
+    scale: .98;
+}
+
+/* ---------- Karten-Layout + Scroll ---------- */
+
+.CardScroller {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.CardScroller::-webkit-scrollbar {
+    height: 8px;
+}
+
+.CardScroller::-webkit-scrollbar-thumb {
+    background: #777777;
+    border-radius: 10px;
+}
+
+.ClickableCard {
+  flex: 0 0 320px;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  box-shadow: none;
+  transform-origin: center center;
+  transition: all 0.4s ease-in-out;
+  scroll-snap-align: start;
+}
+
+/* Hover animations */
+.ClickableCard h2,
+.ClickableCard .ReadMore {
+  transition: color 0.4s ease-in-out;
+}
+
+.ClickableCard img {
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.ClickableCard:hover .ReadMore,
+.ClickableCard:focus .ReadMore,
+.ClickableCard:hover h2,
+.ClickableCard:focus h2 {
+  color: #1ebd4e;
+}
+
+.ClickableCard:hover img,
+.ClickableCard:focus img {
+  transform: scale(1.1);
+}
+
+/* Card inner layout */
+.ArticleBody {
+  padding: 24px;
+}
+
+.ClickableCard h2 {
+  margin: 0 0 18px 0;
+  font-family: sans-serif, cursive; /* im Bespiel bei css-tricks.com wurde folgende Schriftart verwendet: "Bebas Neue" */
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+}
+
+/* Media & reset */
+figure {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* (Optional) Card background override: remove the global background */
+.CardScroller {
+    background: transparent;
+}
