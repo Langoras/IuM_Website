@@ -107,15 +107,3 @@ section {
     width: 100%;           /* sorgt dafür, dass der Text sich links ausrichten kann */
     text-align: left;      /* eigentlicher linksbündiger Text */
 }
-
-footer{
-     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid var(--blue-border);
-    background: var(--blue-light);
-    border-radius: 8px;
-
-}
