@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<!-- Head muss vielleicht noch mit weiteren meta Elementen ausgebaut werden -->
+	<title>Flexbox</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Alexander Ismailov">
+	<meta name="description" content="CSS Einführung ins Thema Flexbox">
+
+	<!-- Favicon erstellt mit https://realfavicongenerator.net ABER KOMPATIBILITÄT FUNKTIONIERT AUF MACOS NOCH NICHT-->
+
+	<link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+
+	<!-- 
+		Orginal Filepaths 
+		<link rel="icon" type="image/png" href="/media_Icon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/media_Icon/favicon.svg" />
+		<link rel="shortcut icon" href="/media_Icon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/media_Icon/apple-touch-icon.png" />
+		<link rel="manifest" href="/media_Icon/site.webmanifest" />
+	-->
+</head>
+
+<body>
+	<header>
+		<h1>Cascading Style Sheets (CSS)</h1>
+
+		<nav>
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
+				<li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+				<li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+				<li><a href="flexbox.html">Flexbox</a></li>
+				<li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+				<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
+				<li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+			</ul>
+		</nav>
+
+		<hr>
+	</header>
+
+	<article>
+
+		<h2>Flexbox</h2>
+
+		<section>
+			<h3>Was ist Flexbox?</h3>
+
+			<p>
+				Das CSS Flexible Layout Module („Flexbox“) ist ein Modul von CSS.
+				Es steuert die Anordung der Boxen, die aus HTML-Elementen entstehen und ist ein zentraler Aspekt im
+				Bezug auf responsives Design einer Website.
+				Im Gegensatz zu klassischen Layout-Methoden wie dem Float-Modell bietet Flexbox eine deutlich einfachere
+				Möglichkeit, die Inhalte flexibel auszurichten.
+				Das Layoutsystem ist eindimensional mit einer Hauptachse (horizontal) und einer Querachse (vertikal).
+				Elemente werden dabei automatisch so verteilt, dass sie den vorhandenen Platz möglichst gut ausnutzen.
+				Die Ausrichtung der Felder verläuft über diese Achsen, wobei man nur auf der Hauptachse „layoutet“.
+				Mithilfe dieses Tools lassen sich Elemente von selbst anordnen, basierend auf der Größe des Fensters.
+				Probleme, die beispielsweise damit gelöst werden können:
+			</p>
+
+			<ul>
+				<li>Inhalt ragt über das Textfeld hinaus</li>
+				<li>Eigenartiges Verhalten beim Verändern der Fenstergröße</li>
+				<li>Inhalte auf verschiedenen Geräten (Bildschirmgrößen) sinnvoll anzeigen lassen</li>
+			</ul>
+
+			<p>
+				Wenn man schöne dynamische Webseiten erstellen möchte, ist es ein mächtiges Tool mit dem man viel Zeit
+				sparen kann.
+				Außerdem fallen, durch die Verwendung, typische Fehlerquellen weg.
+			</p>
+
+		</section>
+
+		<section>
+			<h3>Wie wird Flexbox genutzt?</h3>
+
+			<p>
+				Um die Flexbox Anwendung zu erklären, nutze ich hier in diesem Artikel ein durchgängiges HTML Beispiel:
+			</p>
+
+			<figure>
+				<img src="media_alexander/html_beispiel.png" alt="HTML-Grundgerüst-Beispiel" width="200" height="200">
+				<figcaption>HTML-Grundgerüst-Beispiel</figcaption>
+			</figure>
+
+			<p>
+				Damit Flexbox eingesetzt werden kann, braucht man ein Element(Body), welches hier beispielsweise
+				Sections mit den Zahlen 1-4 enthält.
+				Dieses Element(Body) wird zum Flex-Container, welches wiederum zusätzliche Flex-Container enthält(die
+				einzelnen Sections).
+				Das ist dann die Basis für das Layout.
+			</p>
+
+			<figure>
+				<img src="media_alexander/css_beispiel.png" alt="CSS-Flexbox-Beispiel" width="200" height="200">
+				<figcaption>CSS-Flexbox-Beispiel</figcaption>
+			</figure>
+
+			<p>
+				Mit dem Setzen von display: flex; erfolgt eine automatische Anordnung der enthaltenen Elemente entlang
+				der Hauptachse durch den Browser, der zudem auf Änderungen der Fenstergröße reagiert.
+				Ich benutze einfache Grundwerte für die einzelnen Boxen(Zahlen 1-4). Um die Struktur deutlich sichtbar
+				zu machen, wird jeder Box eine fixe Höhe und Breite, eine klare Hintergrundfarbe sowie eine größere
+				Schriftgröße zugewiesen.
+				Die Elemente stehen dann nebeneinander, solange genügend Platz vorhanden ist, und rücken zusammen oder
+				brechen um, wenn der verfügbare Raum kleiner wird.
+				Für die einzelnen Boxen werden einfache Grundwerte gewählt, damit das Verhalten gut sichtbar wird.
+				Eine feste Höhe und Breite, eine klare Hintergrundfarbe und eine größere Schriftgröße sorgen dafür, dass
+				die Struktur deutlich erkennbar bleibt.
+				Diese Basis reicht aus, um die grundlegende Funktionsweise von Flexbox nachzuvollziehen und verschiedene
+				Varianten durchzuspielen.
+				Eigenschaften wie justify-content oder align-items lassen sich jederzeit ergänzen, um Abstände oder die
+				Ausrichtung gezielt zu verändern.
+				Auf diese Weise entwickelt man ein Gefühl dafür, wie flexibel das Layout reagieren kann, ohne das
+				HTML-Gerüst selbst verändern zu müssen.
+			</p>
+		</section>
+
+		<section>
+			<h3>Kern-Eigenschaften von Flexbox</h3>
+
+			<ul>
+				<li>flex-direction</li>
+				<li>flex-wrap</li>
+				<li>justify-content</li>
+				<li>align-items</li>
+				<li>align-content</li>
+				<li>flex-grow,flex-shrink,flex-basis</li>
+			</ul>
+
+			<p>
+				Während display: flex bloß die Grundfunktion aktiviert, entscheidet sich das eigentliche Verhalten des
+				Layouts erst durch Eigenschaften wie flex-direction bzw. flex-wrap.
+				Diese bestimmen, wie die einzelnen Elemente tatsächlich im Raum angeordnet sind. Mit flex-direction
+				lässt sich festlegen, ob die Inhalte ganz klassisch nebeneinander stehen sollen, ob sie untereinander
+				gelistet werden oder ob die Achse bewusst gedreht wird, um eine bestimmte Struktur zu erhalten.
+				Das wirkt sich gerade bei schmalen oder stark variierenden Bildschirmbreiten deutlich aus, weil sich die
+				Ausrichtung sofort an die verfügbaren Bedingungen anpasst.
+				Ergänzt wird das Ganze durch flex-wrap, indem damit gesteuert wird, ob die Elemente gezwungen sind, in
+				einer Zeile zu bleiben, oder ob sie im Falle zu geringer Breite automatisch umgebrochen werden dürfen.
+				Gerade an dieser Stelle zeigt sich der praktische Nutzen dessen, denn ansonsten würden die Inhalte
+				entweder gequetscht oder aus dem sichtbaren Bereich herauslaufen.
+				Zusammen genommen entsteht auf diesem Weg nicht nur ein „flexibles“ Layout, das auch so funktioniert,
+				sprich nachvollziehbar auf Größenänderung reagiert und sich die Inhalte sauber strukturieren, ohne dass
+				ständig am HTML verändert werden muss.
+			</p>
+		</section>
+
+		<section>
+			<h3>Zusammenfassung</h3>
+
+			<p>
+				Flexbox bietet eine einfache und zuverlässige Möglichkeit, Elemente innerhalb einer Webseite zu ordnen
+				und an verschiedene Bildschirmgrößen anzupassen.
+				Das System arbeitet mit einer Haupt- und einer Querachse und verteilt die Inhalte je nach Platz
+				automatisch.
+				Die grundlegende Einrichtung ist dabei sehr überschaubar:
+				Ein Element wird zum Flex-Container gemacht, und die enthaltenen Bereiche reagieren sofort auf die
+				Vorgaben von CSS. Schon mit wenigen Eigenschaften entsteht ein übersichtliches und flexibles Layout, das
+				sich ohne zusätzlichen Aufwand anpasst.
+				Durch die klare Trennung zwischen HTML und CSS bleibt der Aufbau der Seite verständlich, und Änderungen
+				lassen sich schnell umsetzen.
+				Für alle, die moderne und dynamische Webseiten gestalten möchten, ist Flexbox deshalb ein
+				unverzichtbares Werkzeug.
+				Es reduziert typische Fehler, spart Zeit und ermöglicht ein sauberes, gut kontrollierbares
+				Erscheinungsbild, egal auf welchem Gerät die Seite am Ende aufgerufen wird.
+			</p>
+		</section>
+	</article>
+
+	<footer>
+		<hr>
+		Erstellt in der 8Uhr Gruppe von Alexander Ismailov am <time datetime="2025-11-25">25.11.2025</time>
+	</footer>
+</body>
+
+</html>
