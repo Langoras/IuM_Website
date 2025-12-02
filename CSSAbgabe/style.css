@@ -10,6 +10,7 @@
 
 :root {
     --blue-light: #e9f2ff;
+    --blue-table: #98cde0;
     --blue-soft: #d4e4ff;
     --blue-border: #b8d2ff;
     --blue-text:  #2a4f8a;
@@ -31,6 +32,7 @@ body {
 article {
     width: 85%;
     /* max-width: 900px; */
+
     
     margin: 0 auto;
     padding: 20px;
@@ -53,18 +55,30 @@ h1 {
 }
 
 h2{
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    /* padding: 1em 3em 1em 3em;*/
+    padding: 1em 4em 1em 4em;
     border: 1px solid var(--blue-border);
     background: var(--blue-heavy);
     border-radius: 8px;
 
 }
+h3{
+    text-align: center;
+    padding: 1em 3em 1em 3em;
+    text-decoration: underline;
+}
+h4{
+    
+    padding: 1em 3em 1em 3em;
+}
 
 section p {
-    max-width: 700px;
+    padding: 0em 3em 1em 3em;/*top,right,bottom,left*/
+    max-width: 90%;
     line-height: 1.6;
 }
 
@@ -104,14 +118,14 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 3em;
     border: 1px solid var(--blue-border);
     background: var(--blue-light);
     border-radius: 8px;
 }
 
 ul {
-    padding: 1em;
+    padding-left: 4em;
 }
 
 
@@ -142,10 +156,10 @@ footer{
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;   /* verhindert doppelte Rahmen */
     margin: 20px 0;
-    background: var(--blue-light);
+    background: var(--blue-table);
     border: 1px solid var(--blue-border);
     border-radius: 6px;
     overflow: hidden;            /* sorgt dafür, dass die Rundung sichtbar bleibt */
@@ -162,6 +176,10 @@ th {
     background: var(--blue-heavy);
     color: white;
     font-weight: 600;
+}
+figure{
+    text-align: center;
+
 }
 
 
