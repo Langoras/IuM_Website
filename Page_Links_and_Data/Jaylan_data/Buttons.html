@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Buttons</title>
+    <meta name="author" content="J. A. A.">
+    <meta name="description" content="CSS Einführung ins Buttons">
+
+    <link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+</head>
+
+<body>
+    <header class="header">
+        <h1>Cascading Style Sheets (CSS) </Style></h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+				<li><a href="../Daisy_data/Integration_daisy.html">Integration</a></li>
+				<li><a href="../Houssem_data/Syntax – Befehle (Houssem).html">Syntax</a></li>
+				<li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+				<li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+				<li><a href="../Jaylan_data/CSS_Buttons_Jaylan.html">Buttons</a></li>
+				<li><a href="../Gerke_data/Transforms.html">Transition & Transform</a></li>
+				<li><a href="../Abdel_data/Frameworks_Abdel.html">Frameworks</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <article>
+        <section>
+            <h2>Buttons mit CSS</h2>
+        </section>
+
+        <section>
+            <h3>Was sind Buttons und wofür nutzen wir sie.</h3>
+            <p>Als Butten wir jedes Element auf einer Website bezeichnet welches auf einen Mausklick hin eine Aktion ausführt. 
+            Zum Beispiel wird man zu einer Neuen Unterseite weitergeleitet oder man bestätigt Transaktionen. 
+            Buttons können verscheiden aussehen und verschiedene Effekte haben diese wollen wir uns im folgenden Dokument anschauen.</p>
+        </section>
+
+        <section>
+            <h3>Wie ist ein Button aufgebaut</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>CSS-Eigenschaft</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>background-color</td>
+                        <td>Damit legen Sie die Hintergrundfarbe des selekterten HTML-Elemets fest.</td>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td>Mit border seten Sie den Style für alle vier Rahmenseitern gleichzeitig. Die Eigenschaft ist eine Kurzschreibweise der Eigenschaften border-width, border-style und border-color.</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>Damit setzen Sie die Textfarbe des selektierten HTML-Elementes.</td>
+                    </tr>
+                    <tr>
+                        <td>padding</td>
+                        <td>Mit padding seten Sie den Innen abstand (auch Polsterung genannt) zwischen dem Inhalt und dem Rahmen (border) für alle vier Seiten fest. Diese Eigenschaft ist eine Kurzschreibweise der Eigenschaften padding-top, padding-right, padding-bottom und padding-left. 
+                        Der Standartwert ist 0 für alle vier Seiten. Gebn Sie einen Wert an, gilt dieser Wert für denn Innenabstand aller vier Seiten. Bei zwei Werten wird der erste für oben und unten und der zweite für links und rechts verwendet, und bei drei Werten ist der erste für oben, der zweite für links und rechts und der dritte für unten. Bei vier Werten geht es von oben mit Wert eins im Uhrzeigersinn weiter.</td>
+                    </tr>
+                    <tr>
+                        <td>text-align</td>
+                        <td>Damit können Sie die horizontale Ausrichtung des eines HTML-Elements anpassen.<br>
+                        › left: Linksbündig ausgerichtet<br>
+                        › right: Rechtsbündig ausgerichtet<br>
+                        › center: Zentriert<br>
+                        › justify: Blocksatz, sodass ein Text rechts- sowie linksbündig ausgerichtet wird.</td>
+                    </tr>
+                    <tr>
+                        <td>text-decoration</td>
+                        <td>Seit CSS 1 können Sie mit dieser Eigenschaft dem Text eine Dekoration wie Unter-, Über - oder Durchstrich hinzufügen. Der Standerdwert ist "none".<br>
+                        › none: Keine Dekoration<br>
+                        › underline: Text unterstrich<br>
+                        › overline: Text überstichen<br>
+                        › line-through: Text durchgestrichen</td>
+                    </tr>
+                    <tr>
+                        <td>display</td>
+                        <td>Mit display bestimmen Sie wie ein HTML-Element auf der Seite dargestellt wird. Mit display: inline-block werden Elemente nebeneinander angezeigt.</td>
+                    </tr>
+                    <tr>
+                        <td>font-size</td>
+                        <td>Mit dieser Eigenschaft stellen Sie die Größe der verwendeten Schrift ein. Die Standardgröße ist 16px. Die Schriftgröße kann als numersicher Wert oder als relativer Wert angegeben werden.</td>
+                    </tr>
+                    <tr>
+                        <td>cursor</td>
+                        <td>Mit dieser Eigenschaft können Sie das Aussehen des Mauszeiges ändern, wenn dieser auf ein bestimmtes HTML-Element zeigt. Hierbei gibt es viele möglichen Werte, die angenommen werden können.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Beispiel-CSS</h3>
+            <pre><code>.button{
+    background-color: red;
+    border: none;
+    color: whith;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Was wir bis jetzt gelernt haben</h3>
+            <p>1. Wie man einen Button mit CSS gestaltet.</p>
+        </section>
+    </article>
+
+    <footer>
+        <hr>
+        <p>Erstellt von J. A. A. am <time datetime="2025-12-01">02.12.2025</time></p>
+        <p>Quellen:<br>
+        1. <a href="https://www.w3schools.com/csS/css3_buttons.asp">https://www.w3schools.com/csS/css3_buttons.asp</a><br> 
+        2. HTML5 und CSS3 Das umfassede Handbuch von Jürgen Wolf</p>
+    </footer>
+</body>
+</html>
