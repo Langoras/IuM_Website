@@ -13,11 +13,12 @@
 	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
 
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="styles_j.css">
 </head>
 
 <body>
     <header class="header">
-        <h1>Cascading Style Sheets (CSS) </Style></h1>
+        <h1>Cascading Style Sheets (CSS)</h1>
         <nav>
             <ul class="nav-list">
                 <li><a href="../../index.html">Home</a></li>
@@ -104,6 +105,83 @@
             </table>
         </section>
 
+         <section>
+             <h3> Formen </h3>      
+             <p> Ein Button kann verschiedene Fromen besitzen. Er kann sehr eckig sein mit spiten 90° Winkel oder auch recht rund sein. Dies beinflust aber nicht seine Funktionsweiße sonden nur ein Visueles aussehen was der endnurtzer zu sehen bekommt.
+                dies wird mit dem Opperator "border-radius" angegeben. Bei 0px hat der Button spitze 90° Winkel. Bei einem "border-radius" von 9999px kommt eine perfekte rundung zustande. 
+             </p>
+             <h3> Beispiele border-radius</h3>
+<div class="example-box">
+
+<pre><code>
+    .button-border_0 {
+    border-radius: 0px !important;
+    }
+</code></pre>
+<button class="button-border_0">Hier 0</button>
+           
+             
+<pre><code>
+    .button-border_1 {
+    border-radius: 6px !important;
+    }
+</code></pre>
+<button class="button-border_1">Hier 6 </button>
+
+<pre><code>
+    .button-border_2 {
+    border-radius: 9999px !important;
+    }
+</code></pre>
+<button class="button-border_2">Hier 9999 </button>
+             </div>
+
+
+         </section>     
+        
+         <section>
+             <h3> Fraben </h3>      
+                <p>Bis her sind die Buttons noch alle sehr monochrom. Um dies zu ändern kann man den Buttons auch verscheiene tolle Farben geben. Dies könne sich sorgar verändern je nachdem was man mit dem Button machen. Ob man nun über ihn Hovert, Klickt oder er nur unberührt da ist. 
+                    In diesen Abschnitt wird gezeigt wie man die Fraben bestimtm. Man kann die Fraben in drei methoden darstellen. Man kann:<br>
+                    1. denn Namen der Farbe hin schreiben z.b. color: Darkcyan<br>
+                    2. Oder man gibt den Hex-Code an der wäre in unserm Beispiel color: #008B8B wäre<br>
+                    3. Man kann auch die Farbe in R.G.B. hinschreibt was dann so aus sähe: color: (0,139,139)
+                </p>
+                <h3> Beispiele für Farben </h3>
+<div class="example-box">
+
+<pre><code>
+    .button-color_1 {
+    backroudn-color: Darkcyan;
+    }
+</code></pre>
+<button class="button-color_1">Darkcyan 1</button>
+
+<pre><code>
+    .button-color_2 {
+    backroudn-color: #008B8B;
+    }
+</code></pre>
+<button class="button-color_2">Darkcyan 2</button>
+
+<pre><code>
+    .button-color_3 {
+    backroudn-color: rgb(0,139,139);
+    }
+</code></pre>
+<button class="button-color_3">Darkcyan 3</button>
+
+</div>      
+ <p> Tipp: Diese Färbemethoden gelten auch für: background-color, color (Text), border-color, outline-color, box-shadow, fill und deren Varianten.</p>
+         </section>
+
+
+
+         <section> 
+             <h3> Größen </h3>      
+
+         </section>
+
   <section>
     <h3>Beispiel 1</h3>
     <div class="example-box">
@@ -147,6 +225,10 @@
 </code></pre>
     </div>
 </section>
+
+
+
+
 
         <section>
             <h3>Was wir bis jetzt gelernt haben</h3>
