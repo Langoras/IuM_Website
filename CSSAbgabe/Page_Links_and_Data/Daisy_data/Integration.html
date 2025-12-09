@@ -62,7 +62,10 @@
         <!-- 1. Methode -->
         <h4>1. Externe CSS-Datei (empfohlen)</h4>
         <p>
-            Die externe CSS-Datei ist ideal, wenn mehrere Seiten einer Webseite den gleichen Stil verwenden sollen.
+            Die externe Datei enthält ausschließlich CSS-Code. Das HTML-Dokument verlinkt diese Datei, sodass 
+			der Browser die CSS-Regeln beim Laden der Seite automatisch einbindet. Hierbei kann ein Style-Sheet für mehrere
+			Seiten genutzt werden. Die Wartung ist sehr einfach, da die Änderungen sich auf alle verknüpften Seiten auswirken.
+			Die externe CSS-Datei ist ideal, wenn mehrere Seiten einer Webseite den gleichen Stil verwenden sollen.
             Man erstellt eine separate .css-Datei (z.B. <strong>style.css</strong>) und verknüpft sie mit dem
             HTML-Dokument über den &lt;link&gt;-Tag im &lt;head&gt;:
         </p>
@@ -78,7 +81,10 @@
         <!-- 2. Methode -->
         <h4>2. Interne CSS-Datei</h4>
         <p>Für einmalige Stilanpassungen einer einzelnen Seite kann man ein &lt;style&gt;-Tag im &lt;head&gt; verwenden:</p>
-
+		   Die CSS-Regeln gelten für die gesamte HTML-Datei, in der sie sich befinden. Sie können alle Elemente der Seite
+		   beeinflussen, jedoch nicht andere HTML-Seiten derselben Website. Die Gestaltung ist hierbei im Headbereich festgelegt
+		   und ist praktisch für kleinere Webseiten, da sie keine externe datei benötigt. Die Styles für diese Seite liegen an 
+		   einem zentralen Ort und sind einheitlich für eine Seite gestaltet.
         <pre>
     &lt;style&gt;
         body {
@@ -95,11 +101,17 @@
 
         <!-- 3. Methode -->
         <h4>3. Inline Styles</h4>
-        <p>Inline Styles werden direkt in den HTML-Tags gesetzt und eignen sich für einzelne Elemente:</p>
+        <p>nline-CSS beschreibt die Methode, CSS-Anweisungen direkt in ein HTML-Element zu schreiben.
+			Dies geschieht mit Hilfe des style-Attributs, das innerhalb des jeweiligen Tags definiert wird.
+			Sie sind ideal für kleine Änderungen oder Tests in HTML und überschreiben fast alle anderen CSS-Methoden.
+			Desweiteren sind keine zusätzlichen Dateien notwendig, da sich CSS im selben Dokument befindet.
+		</p>
 
         <pre>               &lt;p style="color: red; font-size: 18px;"&gt;Dieser Text ist rot und größer.&lt;/p&gt;</pre>
 
-        <p>Inline Styles sollten sparsam genutzt werden, da sie die Wartung schwieriger machen.</p>
+        <p>Inline Styles sollten sparsam genutzt werden, da sie die Wartung schwieriger machen.
+		   Das CSS wird unmittelbar am Element eingebettet. Dadurch kann jedes Element individuell gestaltet werden, 
+		   ohne andere Elemente zu beeinflussen.</p>
 
         <!-- Tipps -->
         <h3>Zusätzliche Tipps</h3>
@@ -146,7 +158,7 @@
 </article>
 
 <footer>
-    <p>Erstellt in der 8 Uhr Gruppe von Daisy-Slava Alexandrow <time datetime="2025-11-25">am 02.12.2025</time></p>
+    <p>Erstellt in der 8 Uhr Gruppe von Daisy-Slava Alexandrow <time datetime="2025-11-25">am 09.12.2025</time></p>
    
 </footer>
 
