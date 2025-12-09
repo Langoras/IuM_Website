@@ -11,10 +11,21 @@
 }
 
 .example-box pre {
-    margin: 0;
-    padding: 1em 2em;
-    background: white;
-    border-radius: 6px;
+    padding: 8px 12px;
+    background: #b8bdd1;
+    border: 1px solid #b8bdd1
+    font-family: monospace; 
+    border-radius: 4px;
+    display: inline-block;
+}
+
+pre {
+    background: #d8ddf2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #b8bdd1;
+    font-family: monospace;
+    display: inline-block;
 }
 
 .button {
@@ -71,4 +82,16 @@ background-color: #008B8B;
 
 .button-color_3 {
 background-color: rgb(0, 139, 139);
+}
+
+.button-font_10{
+font-size: 10px;
+}
+
+.button-font_25{
+font-size: 25px;
+}
+
+.button-font_50{
+font-size: 50px;
 }

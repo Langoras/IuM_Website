@@ -150,21 +150,21 @@
                 <h3> Beispiele für Farben </h3>
 <div class="example-box">
 
-<pre><code>
+<pre class=".code_pre"><code>
     .button-color_1 {
     backroudn-color: Darkcyan;
     }
 </code></pre>
 <button class="button-color_1">Darkcyan 1</button>
 
-<pre><code>
+<pre class="pre"><code>
     .button-color_2 {
     backroudn-color: #008B8B;
     }
 </code></pre>
 <button class="button-color_2">Darkcyan 2</button>
 
-<pre><code>
+<pre class="pre"><code>
     .button-color_3 {
     backroudn-color: rgb(0,139,139);
     }
@@ -179,13 +179,45 @@
 
          <section> 
              <h3> Größen </h3>      
+                Man kann Buttons nicht nur in Form und Farbe verändern sondern auch die generele Größe des Buttons. In dieesen Abschnitt wird kurz und prägnat beschrieben wie sie die Größe
+                ihres Buttons ändern können. Man kann die Größe einmal durch die "font-size" und einmal durch das "padding" bestimmen. 
+                Bei "font-size" gibt man in px an wie groß die schrift im innern des Buttons sein soll die größe beinflust.
+                Mit "padding" bestimmt man wie groß der Abstand vom text zu den einzelnen gräzen ist. Angeben wird die mit px*px. 
 
+
+            <h3> Besipiel für Größen </h3>
+<div class="example-box">
+
+<pre class=".code_pre"><code>
+    .button-font_10 {
+    font-size: 10px;
+    }
+</code></pre>
+<button class="button-font_10">Text</button>
+
+<pre class="pre"><code>
+    .button-font_25 {
+    font-size: 25px;
+    }
+</code></pre>
+<button class="button-font_25">Text</button>
+
+<pre class="pre"><code>
+    .button-font_50 {
+    font-size: 50px;
+    }
+</code></pre>
+<button class="button-font_50">Text</button>
          </section>
+
+
+
 
   <section>
     <h3>Beispiel 1</h3>
     <div class="example-box">
-        <pre><code>.button{
+        <pre class="pre"><code>
+    .button{
     background-color: red;
     border: none;
     color: white;
@@ -202,7 +234,7 @@
 
     <h3>Beispiel 2</h3>
     <div class="example-box">
-        <pre><code>.button-green{
+        <pre class="pre"><code>.button-green{
     background-color: green;
     border: none;
     color: white;
@@ -212,7 +244,7 @@
     border-radius: 6px;
 }</code></pre>
         <button class="button-green">Drück mich!</button>
-        <pre><code>
+        <pre class="pre"><code>
     Für den Hover-/ und Drückeffekt 
     .button-green:hover {
         background-color: darkgreen;
