@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
 	
-	<!-- <link rel="stylesheet" href="/styles.css"> -->
+	
     <title>Textformatierung</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Luna Post">
@@ -18,6 +18,8 @@
 	<link rel="shortcut icon" href="media_Icon/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="media_Icon/apple-touch-icon.png" />
 	<link rel="manifest" href="media_Icon/site.webmanifest" />
+	
+	<link rel="stylesheet" href="styles_luna.css">
 	<link rel="stylesheet" href="../../style.css"> <!--CSS Datei verlinkt-->
 	<!-- Orginal Filepaths 
 		<link rel="icon" type="image/png" href="/media_Icon/favicon-96x96.png" sizes="96x96" />
@@ -92,7 +94,7 @@
 		<section>
 			<h3>Umsetzung der Textformatierung</h3>
             <p>
-			In dem Abschnitt <a href="../Daisy_data/Integration_daisy.html">Integration von CSS</a> wurde bereits erarbeitet, dass
+			In dem Abschnitt <a href="../Daisy_data/Integration.html">Integration von CSS</a> wurde bereits erarbeitet, dass
 			es drei übliche Wege gibt um CSS in eine HTML-Datei einzubinden. Im Folgenden wird 
 			vorrausgesetzt, dass mit einem externen Style-Sheet 
 			gearbeitet wird.
@@ -106,74 +108,92 @@
             </p>
 			<p>
 			Erst wird ein Element ausgewählt, welches optisch verändert werden soll, z.B. alle Sections (section), 
-			Überschriften (h1-h6) oder eine bestimmte Klasse wie ".box". 
+			Überschriften (h1-h6), eine bestimmte Klasse wie ".box" oder eine ID wie "zeile3". 
 			</p>
             <p>
 			Danach wird festgelegt, wie der ausgewählte Text nachher aussehen soll. Hierfür gibt es eigene CSS-Eigenschaften 
 			wie zum Beispiel "font-size" auf die nachfolgend noch eingegangen wird. Diese Eigenschaften werden nachfolgend nur noch
 			spezifiziert, indem individuelle Werte wie z.B. eine Schriftgröße ausgewählt wird.
 			</p>
-            <p>
-			HIER WIRD NOCH EIN BEISPIEL FÜR DIESEN ABLAUF EINGEFÜGT
-			</p>
 			<h4>1.Schriftart</h4>
 			<p>
 			Die Darstellung der Schriftart kann in CSS mit "font-family" bestimmt werden. 
 			</p>
-			<p>
-			Diese Beispiel zeigt den Text in der Schriftart PLATZHALTER.
-			</p>
+			<p id="schriftart">Dieses Beispiel zeigt den Text in der Schriftart "Comic Sanse MS".</p>
 			<p>In der praktischen Nutzung werden häufig mehrere Schriften angegeben, falls eine beim Nutzer nicht vorhanden
-			ist.</p>
-			
-			</p>
+			ist. Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#schriftart {
+    font-family: Comic Sans MS;
+}
+</pre>
 			<h4>2.Schriftgröße</h4>
 			<p>
 			Mit "font-size" wird die Schriftgröße festgelegt. Hiermit wird die Hierarchie und Lesbarkeit beeinflusst.
 			</p>
-			<p>BEISPIEL CSS</p>
+			<p id="schriftgroeße">Dies ist ein Beispiel mit der Textgröße 14.</p>
 			
-			<p>Als Einheiten werden hier px, em oder rem verwendet.</p>
-			
+			<p>Als Einheiten werden hier px, em oder rem verwendet. Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#schriftgroeße {
+    font-size: 14px;
+}
+</pre>
 			
 			<h4>3.Schriftfarbe</h4>
-			<p>
-			Um die Schrift farblich zu gestalten wird "color" verwendet. Um eine Farbe festzulegen wird entweder der Farbname, 
-			der Hex-Wert oder der RGB-Wert genutzt.
-			</p>
-			<p>
-			BEISPIEL CSS
-			</p>
+			<p>Um die Schrift farblich zu gestalten wird "color" verwendet.</p>
+			<p id="schriftfarbe">Dies ist ein Beispiel in der Farbe blau.</p>
+			<p> Um eine Farbe festzulegen wird entweder der Farbname, 
+			der Hex-Wert oder der RGB-Wert genutzt. Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#schriftfarbe {
+    color: blue;
+}	
+</pre>
 			<h4>4.Absätze & Außenabstände</h4>
 			<p>Für die Übersichtlichkeit sollte auf die Trennung von Texten mit Absätzen geachtet werden.
 			Dafür wird "margin" angewendet.</p>
-			<p>
-			BEISPIEL CSS
+			<p id="absatz">
+			Dies ist ein Beispiel, bei dem dieser absatz mit margin nach links verschoben wird. Damit dies deutlich rüberkommt, ist hier etwas mehr Text.
 			</p>
-			<p>Hiermit können auch Abstände in alle Richtungen verändert werden.</p>
-			
+			<p>Hiermit können auch Abstände in alle Richtungen verändert werden. Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#absatz {
+     margin-left: 60px;
+    
+}
+</pre>
+
 			<h4>5.Zeilenabstände</h4>
 			<p>
 			Mit diesem Wert wird beeinflusst, wie viel Platz zwischen den Zeilen liegt. Dies beeinflusst deutlich die 
-			Lesbarkeit.
+			Lesbarkeit. 
 			</p>
-			<p>
-			BEISPIEL CSS line-height
+			<p id="abstand">
+			Bei diesem Beispiel wird der Zeilenabstand in 2 verändert. Damit dies deutlich rüberkommt, ist hier etwas mehr Text, 
+			als bei den anderen Beispielen. Um es wirklich deutlich sichtbar zu machen ist dieser extra extra lange Satz noch hier.
 			</p>
-			
+			<p>Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#abstand {
+    line-height: 2;
+}
+</pre>
+
 			<h4>6.Hervorhebungen</h4>
 			<p>
 			Mit "font-weight", "text-decoration" oder "font-style" kann ein Text besonders hervorgehoben werden, indem er fett,
 			kursiv oder unterstrichen wird.
 			</p>
-			<p>
-				BEISPIEL CSS
-			</p>
-			
-            <!--
-			<img src="Bild.png" alt="Bildbeschreibung" width="450" height="400">
-			<img src="Bild2.png" alt="Bildbeschreibung" width="450" height="400">
-            -->
+			<p id="hervorhebung">Dieses Beispiel zeigt kursiven und unterstrichenen Text.</p>
+			<p>Hier der CCS-Code zu dem Beispiel:</p>
+<pre>
+#hervorhebung {
+    font-style: italic;
+    text-decoration: underline;
+}
+</pre>
+
 		</section>
 		<section>
             

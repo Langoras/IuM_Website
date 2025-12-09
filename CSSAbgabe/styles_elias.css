@@ -30,27 +30,22 @@
     border-radius: 16px;
     overflow: hidden;
     background: #fff;
+    color: #000;
     text-decoration: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transform-origin: center;
-    transition: all 0.4s ease-in-out;
     scroll-snap-align: start;
-    color: #000;
-}
-
-/* Hover animations */
-.ClickableCard img {
-    transition: transform 0.4s ease-in-out;
     transform-origin: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Hover effects */
 .ClickableCard:hover img,
 .ClickableCard:focus img {
     transform: scale(1.1);
 }
 
-.ClickableCard:hover .CardMore,
-.ClickableCard:hover .CardTitle {
+.ClickableCard:hover .CardTitle,
+.ClickableCard:hover .CardMore {
     color: #1ebd4e;
 }
 
@@ -85,9 +80,9 @@
     margin-top: 10px;
     font-size: 1rem;
     font-weight: 500;
-    text-align: center;
     display: block;
-    color: #555;    
+    text-align: center;
+    color: #555;
 }
 
 .CardMore:hover {
@@ -95,7 +90,7 @@
 }
 
 /* -------------------------------------------------- */
-/* Media                                               */
+/* Media (image & figure behavior)                    */
 /* -------------------------------------------------- */
 
 figure {
@@ -105,6 +100,8 @@ figure {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
 }
