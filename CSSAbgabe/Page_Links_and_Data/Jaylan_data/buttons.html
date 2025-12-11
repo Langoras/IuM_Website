@@ -48,6 +48,9 @@
         <section>
             <h3>Wie ist ein Button aufgebaut?</h3>
 
+
+
+
             <table id="tabellejaylan">
                 <thead>
                     <tr>
@@ -211,11 +214,51 @@
          </section>
 
 
-
-
   <section>
-    <h3>Beispiel 1</h3>
+    <h3>Buttons mit Funktionen</h3>
+
+    <p>Buttons werden eigentlich immer mit einer Aktion verbunden die sie ausführen, wenn man auf sei drückt. Dies wird durch Java-Skribte bewerkstelligt.
+        Im Folgenden werden 2 Buttons zu sehen sein, welche mit einem Java-Skribte funktionen erhalten Diese mal wird <u>nicht</u> der CSS Text angezeigt sonden das Java-Skribte und die bennung des Buttons.
+         Diese werden beim Draufdrücken ausgeführt. 
+        Es ist auch möglich Skribte auszuführen, in dem man nur mit der Maus über den Buttone Hovert. 
+    </p>
+
     <div class="example-box">
+        <pre class="pre"><code>
+&lt;button class="Up_from_the_Buttom">Drücken!&lt;/button &gt;
+&lt;script&gt;
+document.querySelector(".Up_from_the_Buttom").addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+&lt;/script&gt;
+</code></pre>
+            <button class="Up_from_the_Buttom">Drücken!</button>
+            <script>
+            document.querySelector(".Up_from_the_Buttom").addEventListener("click", () => {
+                window.scrollTo({
+                     top: 0,
+                        behavior: "smooth"
+                 });
+            });
+</script>
+
+</script>
+
+
+<button id="rotateBtn">Seite drehen</button>
+
+<script>
+let rotated = false;
+
+document.getElementById("rotateBtn").addEventListener("click", () => {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
+
+    </div>
+   <!-- <div class="example-box">
         <pre class="pre"><code>
     .button{
     background-color: red;
@@ -255,7 +298,7 @@
         box-shadow: 0 1px #b22222;
     }
 </code></pre>
-    </div>
+    </div> -->
 </section>
 
     </article>
@@ -266,5 +309,14 @@
         1. <a href="https://www.w3schools.com/csS/css3_buttons.asp">https://www.w3schools.com/csS/css3_buttons.asp</a><br> 
         2. HTML5 und CSS3 Das umfassende Handbuch von Jürgen Wolf</p>
     </footer>
+
+
+
 </body>
 </html>
+<button id="closeBtn">Hover to close page</button>
+<script>
+document.getElementById("closeBtn").addEventListener("mouseover", () => {
+    window.location.href = "about:blank";
+});
+</script>
