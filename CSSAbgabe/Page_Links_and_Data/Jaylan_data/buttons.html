@@ -48,6 +48,9 @@
         <section>
             <h3>Wie ist ein Button aufgebaut?</h3>
 
+
+
+
             <table id="tabellejaylan">
                 <thead>
                     <tr>
@@ -211,52 +214,78 @@
          </section>
 
 
-
-
   <section>
-    <h3>Beispiel 1</h3>
-    <div class="example-box">
-        <pre class="pre"><code>
-    .button{
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-}</code></pre>
-        <button class="button">Klick mich!</button>
-    </div>
+    <h3>Buttons mit Funktionen</h3>
 
-    <h3>Beispiel 2</h3>
-    <div class="example-box">
-        <pre class="pre"><code>.button-green{
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-}</code></pre>
-        <button class="button-green">Drück mich!</button>
-        <pre class="pre"><code>
-    Für den Hover-/ und Drückeffekt 
-    .button-green:hover {
-        background-color: darkgreen;
-    }
+    <p>Buttons werden eigentlich immer mit einer Aktion verbunden die sie ausführen, wenn man auf sei drückt. Dies wird durch Java-Skribte bewerkstelligt.
+        Im Folgenden werden 2 Buttons zu sehen sein, welche mit einem Java-Skribte funktionen erhalten Diese mal wird <u>nicht</u> der CSS Text angezeigt sonden das Java-Skribte und die bennung des Buttons.
+         Diese werden beim Draufdrücken ausgeführt. 
+        Es ist auch möglich Skribte auszuführen, in dem man nur mit der Maus über den Buttone Hovert. 
+    </p>
 
-    .button-green:active {
-        transform: translateY(4px);
-        box-shadow: 0 1px #b22222;
-    }
+<div class="example-box">
+        <pre class="pre"><code>
+&lt;button class="Up_from_the_Buttom">Drücken!&lt;/button &gt;
+&lt;script&gt;
+document.querySelector(".Up_from_the_Buttom").addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+behavior: "smooth" });
+});
+&lt;/script&gt;
+
 </code></pre>
-    </div>
+            <button class="Up_from_the_Buttom">Drücken!</button>
+            <script>
+            document.querySelector(".Up_from_the_Buttom").addEventListener("click", () => {
+                window.scrollTo({
+                     top: 0,
+                        behavior: "smooth"
+                 });
+            });
+</script>
+
+</script>
+
+<pre class="pre"><code>
+&lt;button id="rotateBtn"&gt;Seite drehen&lt;/button&gt;
+&lt;script&gt;
+let rotated = false;
+document.getElementById("rotateBtn").addEventListener("click", () =&gt; {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+&lt;/script&gt;
+</code></pre>
+
+<button id="rotateBtn">Drücken</button>
+<script>
+let rotated = false;
+document.getElementById("rotateBtn").addEventListener("click", () => {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
+</div>
 </section>
+
+<section>
+<p> Damit wurden jetzt die Grundbausteine für das Thema Bottens erklärt. Hier gibt es noch verschiedene Buttons. Manche sind nur speziel geformt andere haben Java-Skribte welche ausgeführt werden.
+    Daneben ist immer ein Button welcher denn das gesamte Css und Java-Skribte zeigt. 
+</p>
+
+
+<button class="popupBtn">Fenster öffnen</button>
+<script>
+document.querySelector(".popupBtn").addEventListener("click", () => {
+    let win = window.open("", "popup", "width=400,height=300");
+    win.document.write("<h1>Hallo!</h1><p>Dies ist ein Popup-Fenster.</p>");
+});
+</script>
+
+
+</section>
+
 
     </article>
 
@@ -264,7 +293,17 @@
         <p>Erstellt von J. A. Auth am <time datetime="2025-12-09">09.12.2025</time></p>
         <p>Quellen:<br>
         1. <a href="https://www.w3schools.com/csS/css3_buttons.asp">https://www.w3schools.com/csS/css3_buttons.asp</a><br> 
-        2. HTML5 und CSS3 Das umfassende Handbuch von Jürgen Wolf</p>
+        2. HTML5 und CSS3 Das umfassende Handbuch von Jürgen Wolf<br>
+        3. ChetGPT</p>
     </footer>
+
+
+
 </body>
 </html>
+<button id="closeBtn">Hover to close page</button>
+<script>
+document.getElementById("closeBtn").addEventListener("mouseover", () => {
+    window.location.href = "about:blank";
+});
+</script>

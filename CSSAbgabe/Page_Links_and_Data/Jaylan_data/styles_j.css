@@ -28,37 +28,6 @@ pre {
     display: inline-block;
 }
 
-.button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.button-green {
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.button-green:hover {
-    background-color: darkgreen;
-}
-
-.button-green:active {
-    transform: translateY(4px);
-    box-shadow: 0 1px #b22222;
-}
 
 .button-border_0 {
     border-radius: 0px !important;
@@ -94,4 +63,28 @@ font-size: 25px;
 
 .button-font_50{
 font-size: 50px;
+}
+
+.Up_from_the_Buttom{
+    background-color: rgb(39, 114, 160);
+    border: none;
+    color: rgb(12, 4, 4);
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.popupBtn{
+    background-color: rgb(39, 114, 160);
+    border: none;
+    color: rgb(12, 4, 4);
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px; 
+}
+
+body {
+    transition: transform 0.6s ease;
 }
