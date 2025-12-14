@@ -193,28 +193,238 @@ pre{
     display: block;
 }
 
+/* -------------------------------------------------- */
+/* Flexbox Demo (Josh-Comeau-inspiriert)               */
+/* -------------------------------------------------- */
+
+.flex-demo-panel {
+    background: #0f172a;
+    color: #e5e7eb;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flex-demo-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    width: 42px;
+    height: 24px;
+    border-radius: 24px;
+    background: #475569;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.toggle-slider::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #0f172a;
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    box-shadow: 0 0 0 2px #cbd5e1;
+    transition: transform 0.2s ease;
+}
+
+.toggle input:checked + .toggle-slider {
+    background: #7c3aed;
+}
+
+.toggle input:checked + .toggle-slider::after {
+    transform: translateX(16px);
+}
+
+.flex-stage {
+    position: relative;
+    background: linear-gradient(145deg, #0b1220 0%, #0d152a 100%);
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    min-height: 360px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .flex-demo {
-	display: flex;
-	gap: 1rem;
-	padding: 1rem;
-	border: 2px dashed #aaa;
-	flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    gap: 12px;
+    min-height: 240px;
+    min-width: 240px;
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    border: 1px dashed #334155;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-demo[data-direction^="column"] {
+    flex-direction: column;
+}
+
+.flex-demo[data-direction^="row"] {
+    flex-direction: row;
 }
 
 .flex-item {
-	width: 120px;
-	height: 120px;
-	background: #3b82f6;
-	color: white;
-	font-size: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: grab;
-	user-select: none;
+    background: #1f2937;
+    color: #e5e7eb;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 84px;
+    text-align: center;
 }
 
-.flex-item:active {
-	cursor: grabbing;
-	opacity: 0.6;
+.flex-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 0.5rem;
+}
+
+.flex-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.flex-controls select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #1f2937;
+    background: #111827;
+    color: #e5e7eb;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.flex-controls select:focus {
+    outline: 2px solid #7c3aed;
+    outline-offset: 2px;
+}
+
+.code-output {
+    background: #0b1220;
+    color: #e2e8f0;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    overflow: auto;
+    font-size: 0.95rem;
+    border: 1px solid #1f2937;
+}
+
+.axis-overlay {
+    position: absolute;
+    inset: 1.5rem;
+    pointer-events: none;
+    display: none;
+}
+
+.flex-stage.show-axis .axis-overlay {
+    display: block;
+}
+
+.axis-line {
+    position: absolute;
+    background: #94a3b8;
+    opacity: 0.6;
+    border-radius: 999px;
+}
+
+.axis-label {
+    position: absolute;
+    color: #cbd5e1;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.axis-row .axis-line {
+    height: 2px;
+    width: calc(100% - 32px);
+    top: 50%;
+    left: 16px;
+}
+
+.axis-row .axis-line::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -5px;
+    border-left: 8px solid #94a3b8;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.axis-row .axis-label {
+    top: calc(50% + 8px);
+    right: 24px;
+}
+
+.axis-column .axis-line {
+    width: 2px;
+    height: calc(100% - 32px);
+    left: 50%;
+    top: 16px;
+}
+
+.axis-column .axis-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    border-top: 8px solid #94a3b8;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+.axis-column .axis-label {
+    left: calc(50% + 10px);
+    bottom: 24px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.axis-reverse .axis-line::after {
+    transform: rotate(180deg);
 }
