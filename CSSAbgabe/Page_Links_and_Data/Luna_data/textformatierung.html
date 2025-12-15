@@ -191,12 +191,14 @@
 </pre>
 
 			<h4>6.Hervorhebungen</h4>
+
 			<p>
 				Mit "font-weight", "text-decoration" oder "font-style" kann ein Text besonders hervorgehoben werden,
 				indem er fett,
 				kursiv oder unterstrichen wird.
 			</p>
 			<p id="hervorhebung">Dieses Beispiel zeigt kursiven und unterstrichenen Text.</p>
+			<button id="toggleBtn">Hervorhebung anzeigen / verstecken</button>
 			<p>Hier der CCS-Code zu dem Beispiel:</p>
 			<pre>
 #hervorhebung {
@@ -209,6 +211,7 @@
 		<section>
 
 			<h3>Zusammenfassung</h3>
+
 			<p>
 				Unter Textformatierung versteht man alle Maßnahmen, die das Erscheinungsbild von Text
 				beeinflussen.Ob die Wahl der Schriftart, der Größe, der Farbe oder
@@ -226,22 +229,60 @@
 			<p>
 				Hier die wichtigsten Erkenntnisse auf einen Blick:
 			</p>
+			<button id="lernBtn">Wichtige Begriffe hervorheben</button>
 			<ul>
 				<li>Wie ein Text formatiert ist trägt maßgeblich zur guten Lesbarkeit und somit zu einer interessannten
 					Website bei.</li>
 				<li>Mithilfe von CSS kann ein Text sehr viel gestaltet werden.</li>
-				<li>font-family -> Schriftart</li>
-				<li>font-size -> Schriftgröße</li>
-				<li>color -> Schriftfarbe</li>
-				<li>margin -> Absätze & Außenabstände</li>
-				<li>line-height -> Zeilenabstände</li>
-				<li>font-weight, text-decoration oder font-style -> Hervorhebungen</li>
+				<li>font-family: Schriftart</li>
+				<li>font-size: Schriftgröße</li>
+				<li>color: Schriftfarbe</li>
+				<li>margin: Absätze & Außenabstände</li>
+				<li>line-height: Zeilenabstände</li>
+				<li>font-weight, text-decoration oder font-style: Hervorhebungen</li>
 			</ul>
 		</section>
 	</article>
 	<footer>
 		<p>Erstellt in der 8Uhr Gruppe von Luna Post <time datetime="2025-12-02">am 02.12.2025</time></p>
 	</footer>
+
+<script>
+    
+    const toggleBtn = document.getElementById("toggleBtn");
+    const hervorhebung = document.getElementById("hervorhebung");
+
+    toggleBtn.addEventListener("click", () => {
+        hervorhebung.hidden = !hervorhebung.hidden;
+    });
+
+    
+    const lernBtn = document.getElementById("lernBtn");
+    let aktiv = false;
+
+    lernBtn.addEventListener("click", () => {
+        const listItems = document.querySelectorAll(
+            "article section:last-of-type ul li"
+        );
+
+        listItems.forEach(li => {
+            if (!li.textContent.includes(":")) return;
+
+            const [eigenschaften, beschreibung] = li.textContent.split(":");
+
+            if (!aktiv) {
+                li.innerHTML = `<span class="highlight">${eigenschaften}</span>:${beschreibung}`;
+            } else {
+                li.textContent = `${eigenschaften}:${beschreibung}`;
+            }
+        });
+
+        aktiv = !aktiv;
+        lernBtn.textContent = aktiv
+            ? "Hervorhebung entfernen"
+            : "Wichtige Begriffe hervorheben";
+    });
+</script>
 
 
 </body>
