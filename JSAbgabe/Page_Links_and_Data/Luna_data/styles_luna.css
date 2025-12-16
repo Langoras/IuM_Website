@@ -1,0 +1,40 @@
+
+#schriftart {
+    font-family: Comic Sans MS;
+}
+
+#schriftgroeße {
+    font-size: 14px;
+}
+
+#schriftfarbe {
+    color: blue;
+}
+
+#absatz {
+     margin-left: 60px;
+    
+}
+
+#abstand {
+    line-height: 2;
+}
+
+#hervorhebung {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+pre {
+    background: #d8ddf2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #b8bdd1;
+    font-family: monospace;
+    display: inline-block;
+}
+
+.highlight {
+    background-color: #a1c6ed;
+    font-weight: bold;
+}

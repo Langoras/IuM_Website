@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Buttons</title>
+    <meta name="author" content="J. A. A.">
+    <meta name="description" content="CSS Einführung ins Buttons">
+
+    <link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg" />
+	<link rel="shortcut icon" href="../../media_Icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png" />
+	<link rel="manifest" href="../../media_Icon/site.webmanifest" />
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="styles_j.css">
+    <script src="scripte_jaylan.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Cascading Style Sheets (CSS)</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+				<li><a href="../Daisy_data/integration.html">Integration</a></li>
+				<li><a href="../Houssem_data/syntax.html">Syntax</a></li>
+				<li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+				<li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+				<li><a href="../Jaylan_data/buttons.html">Buttons</a></li>
+				<li><a href="../Gerke_data/transforms.html">Transition & Transform</a></li>
+				<li><a href="../Abdel_data/frameworks.html">Frameworks</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <article>
+            <h2>Buttons mit CSS</h2>
+
+
+        <section>
+            <h3>Was sind Buttons und wofür werden sie genutzt?</h3>
+            <p>Als Button wird jedes Element auf einer Website bezeichnet, welches auf einen Mausklick folgend eine Aktion ausführt. 
+            Zum Beispiel wird man zu einer neuen Unterseite weitergeleitet oder man bestätigt Transaktionen. 
+            Buttons können unterschiedlich aussehen und verschiedene Effekte haben. Diese wollen wir uns im folgenden Dokument anschauen.</p>
+        </section>
+
+        <section>
+            <h3>Wie ist ein Button aufgebaut?</h3>
+
+
+
+
+            <table id="tabellejaylan">
+                <thead>
+                    <tr>
+                        <th>CSS-Eigenschaft</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>background-color</td>
+                        <td>Damit legen Sie die Hintergrundfarbe des selektierten HTML-Elemets fest.</td>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td>Mit border setzen Sie den Style für alle vier Rahmenseiten gleichzeitig. Die Eigenschaft ist eine Kurzschreibweise der Eigenschaften border-width, border-style und border-color.</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>Damit setzen Sie die Textfarbe des selektierten HTML-Elementes.</td>
+                    </tr>
+                    <tr>
+                        <td>padding</td>
+                        <td>Mit padding setzen Sie den Innenabstand (auch Polsterung genannt) zwischen dem Inhalt und dem Rahmen (border) für alle vier Seiten fest. Diese Eigenschaft ist eine Kurzschreibweise der Eigenschaften padding-top, padding-right, padding-bottom und padding-left. 
+                        Der Standardwert ist 0 für alle vier Seiten. Geben Sie einen Wert an, gilt dieser Wert für den Innenabstand aller vier Seiten. Bei zwei Werten wird der erste für oben und unten und der zweite für links und rechts verwendet, und bei drei Werten ist der erste für oben, der zweite für links und rechts und der dritte für unten. Bei vier Werten geht es von oben mit Wert eins im Uhrzeigersinn weiter.</td>
+                    </tr>
+                    <tr>
+                        <td>text-align</td>
+                        <td>Damit können Sie die horizontale Ausrichtung des eines HTML-Elements anpassen.<br>
+                        › left: Linksbündig ausgerichtet<br>
+                        › right: Rechtsbündig ausgerichtet<br>
+                        › center: Zentriert<br>
+                        › justify: Blocksatz, sodass ein Text rechts- sowie linksbündig ausgerichtet wird.</td>
+                    </tr>
+                    <tr>
+                        <td>text-decoration</td>
+                        <td>Seit CSS 1 können Sie mit dieser Eigenschaft dem Text eine Dekoration wie Unter-, Über- oder Durchstrich hinzufügen. Der Standartwert ist "none".<br>
+                        › none: Keine Dekoration<br>
+                        › underline: Text unterstrichen<br>
+                        › overline: Text überstichen<br>
+                        › line-through: Text durchgestrichen</td>
+                    </tr>
+                    <tr>
+                        <td>display</td>
+                        <td>Mit display bestimmen Sie wie ein HTML-Element auf der Seite dargestellt wird. Mit display: inline-block werden Elemente nebeneinander angezeigt.</td>
+                    </tr>
+                    <tr>
+                        <td>font-size</td>
+                        <td>Mit dieser Eigenschaft stellen Sie die Größe der verwendeten Schrift ein. Die Standardgröße ist 16px. Die Schriftgröße kann als numerischer Wert oder als relativer Wert angegeben werden.</td>
+                    </tr>
+                    <tr>
+                        <td>cursor</td>
+                        <td>Mit dieser Eigenschaft können Sie das Aussehen des Mauszeigers ändern, wenn dieser auf ein bestimmtes HTML-Element zeigt. Hierbei gibt es viele mögliche Werte, die angenommen werden können.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+         <section>
+             <h3> Formen </h3>      
+             <p> Ein Button kann verschiedene Fromen besitzen. Er kann sehr eckig sein mit spiten 90° Winkel oder auch recht rund sein. Dies beinflust aber nicht seine Funktionsweiße sonden nur ein Visueles aussehen was der endnurtzer zu sehen bekommt.
+                dies wird mit dem Opperator "border-radius" angegeben. Bei 0px hat der Button spitze 90° Winkel. Bei einem "border-radius" von 9999px kommt eine perfekte rundung zustande. 
+             </p>
+             <h3> Beispiele border-radius</h3>
+<div class="example-box">
+
+<pre><code>
+    .button-border_0 {
+    border-radius: 0px !important;
+    }
+</code></pre>
+<button class="button-border_0">Hier 0</button>
+           
+             
+<pre><code>
+    .button-border_1 {
+    border-radius: 6px !important;
+    }
+</code></pre>
+<button class="button-border_1">Hier 6 </button>
+
+<pre><code>
+    .button-border_2 {
+    border-radius: 9999px !important;
+    }
+</code></pre>
+<button class="button-border_2">Hier 9999 </button>
+             </div>
+
+
+         </section>     
+        
+         <section>
+             <h3> Farben </h3>      
+                <p>Bis her sind die Buttons noch alle sehr monochrom. Um dies zu ändern kann man den Buttons auch verscheiene tolle Farben geben. Dies könne sich sorgar verändern je nachdem was man mit dem Button machen. Ob man nun über ihn Hovert, Klickt oder er nur unberührt da ist. 
+                    In diesen Abschnitt wird gezeigt wie man die Fraben bestimtm. Man kann die Fraben in drei methoden darstellen. Man kann:<br>
+                    1. denn Namen der Farbe hin schreiben z.b. color: Darkcyan<br>
+                    2. Oder man gibt den Hex-Code an der wäre in unserm Beispiel color: #008B8B wäre<br>
+                    3. Man kann auch die Farbe in R.G.B. hinschreibt was dann so aus sähe: color: (0,139,139)
+                </p>
+                <h3> Beispiele für Farben </h3>
+<div class="example-box">
+
+<pre class=".code_pre"><code>
+    .button-color_1 {
+    backroudn-color: Darkcyan;
+    }
+</code></pre>
+<button class="button-color_1">Darkcyan 1</button>
+
+<pre class="pre"><code>
+    .button-color_2 {
+    backroudn-color: #008B8B;
+    }
+</code></pre>
+<button class="button-color_2">Darkcyan 2</button>
+
+<pre class="pre"><code>
+    .button-color_3 {
+    backroudn-color: rgb(0,139,139);
+    }
+</code></pre>
+<button class="button-color_3">Darkcyan 3</button>
+
+</div>      
+ <p> Tipp: Diese Färbemethoden gelten auch für: background-color, color (Text), border-color, outline-color, box-shadow, fill und deren Varianten.</p>
+         </section>
+
+
+
+         <section> 
+             <h3> Größen </h3>      
+                Man kann Buttons nicht nur in Form und Farbe verändern sondern auch die generele Größe des Buttons. In dieesen Abschnitt wird kurz und prägnat beschrieben wie sie die Größe
+                ihres Buttons ändern können. Man kann die Größe einmal durch die "font-size" und einmal durch das "padding" bestimmen. 
+                Bei "font-size" gibt man in px an wie groß die schrift im innern des Buttons sein soll die größe beinflust.
+                Mit "padding" bestimmt man wie groß der Abstand vom text zu den einzelnen gräzen ist. Angeben wird die mit px*px. 
+
+
+            <h3> Besipiel für Größen </h3>
+<div class="example-box">
+
+<pre class=".code_pre"><code>
+    .button-font_10 {
+    font-size: 10px;
+    }
+</code></pre>
+<button class="button-font_10">Text</button>
+
+<pre class="pre"><code>
+    .button-font_25 {
+    font-size: 25px;
+    }
+</code></pre>
+<button class="button-font_25">Text</button>
+
+<pre class="pre"><code>
+    .button-font_50 {
+    font-size: 50px;
+    }
+</code></pre>
+<button class="button-font_50">Text</button>
+         </section>
+
+
+  <section>
+    <h3>Buttons mit Funktionen</h3>
+
+    <p>Buttons werden eigentlich immer mit einer Aktion verbunden die sie ausführen, wenn man auf sei drückt. Dies wird durch Java-Skribte bewerkstelligt.
+        Im Folgenden werden 2 Buttons zu sehen sein, welche mit einem Java-Skribte funktionen erhalten Diese mal wird <u>nicht</u> der CSS Text angezeigt sonden das Java-Skribte und die bennung des Buttons.
+         Diese werden beim Draufdrücken ausgeführt. 
+        Es ist auch möglich Skribte auszuführen, in dem man nur mit der Maus über den Buttone Hovert. 
+    </p>
+
+<div class="example-box">
+        <pre class="pre"><code>
+&lt;button class="Up_from_the_Buttom">Drücken!&lt;/button &gt;
+&lt;script&gt;
+document.querySelector(".Up_from_the_Buttom").addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+behavior: "smooth" });
+});
+&lt;/script&gt;
+
+</code></pre>
+            <button class="Up_from_the_Buttom">Drücken!</button>
+           
+
+<pre class="pre"><code>
+&lt;button id="rotateBtn"&gt;Seite drehen&lt;/button&gt;
+&lt;script&gt;
+let rotated = false;
+document.getElementById("rotateBtn").addEventListener("click", () =&gt; {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+&lt;/script&gt;
+</code></pre>
+
+<button id="rotateBtn">Drücken</button>
+<script>
+let rotated = false;
+document.getElementById("rotateBtn").addEventListener("click", () => {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
+</div>
+</section>
+
+<section>
+<p> Damit wurden jetzt die Grundbausteine für das Thema Bottens erklärt. Hier gibt es noch verschiedene Buttons. Manche sind nur speziel geformt andere haben Java-Skribte welche ausgeführt werden.
+    Daneben ist immer ein Button welcher denn das gesamte Css und Java-Skribte zeigt. 
+</p>
+
+
+<button type="button" class="popupBtn">Fenster öffnen</button>
+
+
+<button type="button" class="color-changer">Änder Farbe</button>
+
+
+
+<button class="closeBtn">Button Nr. 3</button>
+<script>
+document.querySelectorAll(".closeBtn").forEach(btn => {
+    btn.addEventListener("mouseover", () => {
+        window.location.href = "about:blank";
+    });
+});
+</script>
+
+
+<button class="playBtn">Musik abspielen</button>
+
+
+
+
+
+
+</section>
+
+
+    </article>
+
+    <footer>
+        <p>Erstellt von J. A. Auth am <time datetime="2025-12-09">09.12.2025</time></p>
+        <p>Quellen:<br>
+        1. <a href="https://www.w3schools.com/csS/css3_buttons.asp">https://www.w3schools.com/csS/css3_buttons.asp</a><br> 
+        2. HTML5 und CSS3 Das umfassende Handbuch von Jürgen Wolf<br>
+        3. ChatGPT</p>
+    </footer>
+
+
+
+</body>
+</html>

@@ -275,13 +275,91 @@ document.getElementById("rotateBtn").addEventListener("click", () => {
 </p>
 
 
-<button class="popupBtn">Fenster öffnen</button>
+<button type="button" class="popupBtn">Fenster öffnen</button>
 <script>
 document.querySelector(".popupBtn").addEventListener("click", () => {
     let win = window.open("", "popup", "width=400,height=300");
-    win.document.write("<h1>Hallo!</h1><p>Dies ist ein Popup-Fenster.</p>");
+
+    win.document.write(
+        ".popupBtn {\n" +
+        "    background-color: DarkCyan;\n" +
+        "    color: white;\n" +
+        "    border: none;\n" +
+        "    padding: 12px 24px;\n" +
+        "    font-size: 16px;\n" +
+        "    cursor: pointer;\n\n" +
+        "    border-radius: 12px 0 12px 0;\n" +
+        "}"
+    );
 });
 </script>
+
+<button type="button" class="color-changer">Änder Farbe</button>
+
+<script>
+document.querySelectorAll(".color-changer").forEach(btn => {
+    btn.addEventListener("click", () => {
+        // Farbe ändern
+        btn.classList.toggle("active");
+
+        // Popup öffnen (nur Anzeige von Text)
+        const win = window.open("about:blank", "_blank", "width=400,height=300");
+        if (!win) return;
+
+        win.document.write(
+            ".color-changer {\n" +
+            "    background-color: rgb(39, 160, 77);\n" +
+            "    border: none;\n" +
+            "    color: rgb(12, 4, 4);\n" +
+            "    padding: 12px 24px;\n" +
+            "    font-size: 14px;\n" +
+            "    cursor: pointer;\n" +
+            "    border-radius: 6px;\n" +
+            "}\n\n" +
+            ".color-changer.active {\n" +
+            "    background-color: rgb(202, 51, 51);\n" +
+            "}"
+        );
+    });
+});
+</script>
+
+<button class="closeBtn">Button Nr. 3</button>
+<script>
+document.querySelectorAll(".closeBtn").forEach(btn => {
+    btn.addEventListener("mouseover", () => {
+        window.location.href = "about:blank";
+    });
+});
+</script>
+
+<button class="playBtn">Musik abspielen</button>
+
+<script>
+document.querySelectorAll(".playBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        // Musik abspielen
+        const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+        audio.play();
+
+        // Popup öffnen
+        const win = window.open("about:blank", "_blank", "width=400,height=200");
+        if (!win) return;
+
+        // NUR TEXT anzeigen (kein Script!)
+        win.document.write(
+            "Klick auf den Button spielt Musik ab.\n\n" +
+            "CSS-Klasse: .playBtn\n" +
+            "MP3: SoundHelix-Song-1.mp3"
+        );
+    });
+});
+</script>
+
+
+
+
 
 
 </section>
@@ -294,16 +372,10 @@ document.querySelector(".popupBtn").addEventListener("click", () => {
         <p>Quellen:<br>
         1. <a href="https://www.w3schools.com/csS/css3_buttons.asp">https://www.w3schools.com/csS/css3_buttons.asp</a><br> 
         2. HTML5 und CSS3 Das umfassende Handbuch von Jürgen Wolf<br>
-        3. ChetGPT</p>
+        3. ChatGPT</p>
     </footer>
 
 
 
 </body>
 </html>
-<button id="closeBtn">Hover to close page</button>
-<script>
-document.getElementById("closeBtn").addEventListener("mouseover", () => {
-    window.location.href = "about:blank";
-});
-</script>
