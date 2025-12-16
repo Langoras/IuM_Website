@@ -1,9 +1,11 @@
 //SCHNEE EFFEKT mihtilfe von "How to make JavaScript Snow animation in Minuites: https://www.youtube.com/watch?v=JG7B4W9HeOw&t=334s"
 
+let snowActive = true;
+let animationId = null;
 
-const NUMBER_OF_SNOWFLAKES = 300;
+const NUMBER_OF_SNOWFLAKES = 400;
 const MAX_SNOWFLAKE_SIZE = 5;
-const MAX_SNOWFLAKE_SPEED = 2;
+const MAX_SNOWFLAKE_SPEED = 4;
 const SNOWFLAKE_COLOR = '#ddd';
 const snowflakes = [];
 
@@ -42,17 +44,43 @@ const updateSnowflake = snowflake => {
 };
 
 const animate = () => {
+    if (!snowActive) return;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     snowflakes.forEach(snowflake => {
         updateSnowflake(snowflake);
-        drawSnowflake(snowflake)
+        drawSnowflake(snowflake);
     });
 
-    requestAnimationFrame(animate);
-}
+    animationId = requestAnimationFrame(animate);
+};
+
+const startSnow = () => {
+    if (snowActive) return;
+    snowActive = true;
+    canvas.style.display = 'block';
+    animate();
+};
+
+const stopSnow = () => {
+    snowActive = false;
+    canvas.style.display = 'none';
+    if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+    }
+};
 
 for (let i = 0; i < NUMBER_OF_SNOWFLAKES; i++) {
     snowflakes.push(createSnowflake());
 }
 
 animate();
+
+document.getElementById('snowToggle').addEventListener('click', () => {
+    if (snowActive) {
+        stopSnow();
+    } else {
+        startSnow();
+    }
+});
