@@ -251,6 +251,13 @@ document.getElementById("rotateBtn").addEventListener("click", () =&gt; {
 </code></pre>
 
 <button id="rotateBtn">Drücken</button>
+<script>
+let rotated = false;
+document.getElementById("rotateBtn").addEventListener("click", () => {
+    rotated = !rotated;
+    document.body.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
 </div>
 </section>
 
@@ -268,6 +275,13 @@ document.getElementById("rotateBtn").addEventListener("click", () =&gt; {
 
 
 <button class="closeBtn">Button Nr. 3</button>
+<script>
+document.querySelectorAll(".closeBtn").forEach(btn => {
+    btn.addEventListener("mouseover", () => {
+        window.location.href = "about:blank";
+    });
+});
+</script>
 
 
 <button class="playBtn">Musik abspielen</button>
