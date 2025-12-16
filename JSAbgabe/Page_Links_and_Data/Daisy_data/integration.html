@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Methoden, um CSS in HTML zu integrieren</title>
+    <meta name="author" content="Daisy-Slava Alexandrow">
+    <meta name="description" content="Methoden, um CSS in HTML zu integrieren - Einfache Erklärung">
+
+    <!-- Favicon erstellt mit https://realfavicongenerator.net -->
+    <link rel="icon" type="image/png" href="../../media_Icon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../../media_Icon/favicon.svg">
+    <link rel="shortcut icon" href="../../media_Icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media_Icon/apple-touch-icon.png">
+    <link rel="manifest" href="../../media_Icon/site.webmanifest">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cascading Style Sheets (CSS)</h1>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../Daisy_data/integration.html">Integration</a></li>
+                <li><a href="../Houssem_data/syntax.html">Syntax</a></li>
+                <li><a href="../Luna_data/textformatierung.html">Textformatierung</a></li>
+                <li><a href="../Alexander_data/flexbox.html">Flexbox</a></li>
+                <li><a href="../Jaylan_data/buttons.html">Buttons</a></li>
+                <li><a href="../Gerke_data/transforms.html">Transition & Transform</a></li>
+                <li><a href="../Abdel_data/frameworks.html">Frameworks</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+    </header>
+
+
+    <article>
+
+        <h2>Methoden, um CSS in HTML zu integrieren</h2>
+
+        <section>
+            <h3>Einleitung</h3>
+            <p>
+                Die Gestaltung moderner Webseiten basiert heute hauptsächlich auf HTML für den strukturellen
+                Aufbau und auf CSS (Cascading Style Sheets) für das visuelle Design.
+                CSS bestimmt also, wie eine Webseite aussieht: Farben, Abstände, Schriftarten, Layouts und vieles mehr.
+                Während HTML den Inhalt liefert, kümmert sich CSS um das Erscheinungsbild. Um CSS tatsächlich
+                anzuwenden,
+                muss es jedoch auf irgendeine Weise mit HTML verbunden werden.
+                CSS kann in HTML auf drei Arten integriert werden: extern über einen
+                &lt;link&gt;-Tag im &lt;head&gt;-Bereich, intern mit einem &lt;style&gt;-Tag im
+                &lt;head&gt;-Bereich oder inline mithilfe des style-Attributs direkt in einzelnen HTML-Tags.
+                Die externe Methode ist für größere Projekte die gängigste und beste Wahl.
+            </p>
+        </section>
+
+        <section>
+            <h3>Methoden</h3>
+
+            <!-- 1. Methode -->
+            <h4>1. Externe CSS-Datei (empfohlen)</h4>
+            <p>
+                Die externe Datei enthält ausschließlich CSS-Code. Das HTML-Dokument verlinkt diese Datei, sodass
+                der Browser die CSS-Regeln beim Laden der Seite automatisch einbindet. Hierbei kann ein Style-Sheet für
+                mehrere
+                Seiten genutzt werden. Die Wartung ist sehr einfach, da die Änderungen sich auf alle verknüpften Seiten
+                auswirken.
+                Die externe CSS-Datei ist ideal, wenn mehrere Seiten einer Webseite den gleichen Stil verwenden sollen.
+                Man erstellt eine separate .css-Datei (z.B. <strong>style.css</strong>) und verknüpft sie mit dem
+                HTML-Dokument über den &lt;link&gt;-Tag im &lt;head&gt;:
+            </p>
+
+            <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+
+            <p>Beispiel für ein Bild, das durch CSS gestaltet werden kann:</p>
+            <figure>
+                <img src="media_daisy/kitten.jpg" alt="Niedliches Kätzchen" width="300">
+            </figure>
+
+            <!-- 2. Methode -->
+            <h4>2. Interne CSS-Datei</h4>
+            <p>Für einmalige Stilanpassungen einer einzelnen Seite kann man ein &lt;style&gt;-Tag im &lt;head&gt;
+                verwenden:
+                Die CSS-Regeln gelten für die gesamte HTML-Datei, in der sie sich befinden. Sie können alle Elemente der
+                Seite
+                beeinflussen, jedoch nicht andere HTML-Seiten derselben Website. Die Gestaltung ist hierbei im
+                Headbereich festgelegt
+                und ist praktisch für kleinere Webseiten, da sie keine externe datei benötigt. Die Styles für diese
+                Seite liegen an
+                einem zentralen Ort und sind einheitlich für eine Seite gestaltet.</p>
+            <pre>
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: darkblue;
+        }
+        &lt;/style&gt;
+        </pre>
+
+            <p>Damit kann man z.B. die Schriftart, Farben oder Abstände direkt auf einer Seite definieren.</p>
+
+            <!-- 3. Methode -->
+            <h4>3. Inline Styles</h4>
+            <p>nline-CSS beschreibt die Methode, CSS-Anweisungen direkt in ein HTML-Element zu schreiben.
+                Dies geschieht mit Hilfe des style-Attributs, das innerhalb des jeweiligen Tags definiert wird.
+                Sie sind ideal für kleine Änderungen oder Tests in HTML und überschreiben fast alle anderen
+                CSS-Methoden.
+                Desweiteren sind keine zusätzlichen Dateien notwendig, da sich CSS im selben Dokument befindet.
+            </p>
+
+            <pre>               &lt;p style="color: red; font-size: 18px;"&gt;Dieser Text ist rot und größer.&lt;/p&gt;</pre>
+
+            <p>Inline Styles sollten sparsam genutzt werden, da sie die Wartung schwieriger machen.
+                Das CSS wird unmittelbar am Element eingebettet. Dadurch kann jedes Element individuell gestaltet
+                werden,
+                ohne andere Elemente zu beeinflussen.</p>
+
+            <!-- Tipps -->
+            <h3>Zusätzliche Tipps</h3>
+            <ul>
+                <li>Erstellen Sie einen eigenen Ordner für Bilder (z.B. <strong>images</strong>).</li>
+                <li>Für größere Projekte empfiehlt sich immer eine externe CSS-Datei.</li>
+                <li>Testen Sie die Seite regelmäßig im Browser.</li>
+                <li>Verwenden Sie Kommentare in HTML (&lt;!-- Kommentar --&gt;).</li>
+            </ul>
+
+            <p>Beispiel für ein zweites Bild:</p>
+
+            <figure>
+                <img src="media_daisy/hund.png" alt="Niedlicher Hund" width="300">
+            </figure>
+
+
+
+
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section>
+            <h3>Zusammenfassung</h3>
+            <p>
+                Das Einbinden von CSS in HTML ist ein grundlegender Bestandteil der Webentwicklung.
+                Jede der drei Methoden erfüllt einen bestimmten Zweck. Inline-CSS eignet sich nur für sehr kleine,
+                schnelle Anpassungen, während internes CSS eine gute Lösung für einfache Projekte oder einzelne
+                HTML-Seiten darstellt.
+                Externes CSS hingegen ist die optimale Wahl für fast alle professionellen und größeren Webprojekte, da
+                es eine klare
+                Trennung von Inhalt und Design, Wiederverwendbarkeit und effektive Wartung bietet. Die richtige Wahl der
+                Methode hängt
+                daher immer von der Größe des Projekts, dem Aufwand und der gewünschten Struktur ab.
+            </p>
+
+            <ul>
+                <li>Ich habe gelernt, mit welchen Methoden ich CSS in HTML einbinden kann.</li>
+                <li>Ich kann Bilder via CSS in HTML einfügen.</li>
+                <li>Ich weiß, wie man Schriftart, Farben oder Abstände definiert.</li>
+            </ul>
+        </section>
+
+    </article>
+
+    <footer>
+        <p>Erstellt in der 8 Uhr Gruppe von Daisy-Slava Alexandrow <time datetime="2025-11-25">am 09.12.2025</time></p>
+
+    </footer>
+
+</body>
+
+</html>

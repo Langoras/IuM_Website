@@ -1,0 +1,109 @@
+  code:before {
+    content: "\a";
+    white-space: pre;
+  }
+
+  code {
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  code:after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  .codeStarkeTrennung:before {
+    content: "\a\a";
+    white-space: pre;
+  }
+
+  div {
+    width: 80%;
+    height: 10em;
+    transition-property: width;
+    transition-duration: 1.7s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+  }
+
+  .grid-container {
+    padding: 2em 0em 15em 3em;
+    /*top,right,bottom,left*/
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  /*
+div:hover {
+  width: 90vw;
+  transition-duration:2.3s;
+  transition-timing-function: ease-in-out;
+*/
+
+  .TransitionBeispiel {
+    background-color: rgb(103, 103, 216);
+    width: 20vw;
+    transition-duration: 2.3s;
+    transition-timing-function: ease-in-out;
+    margin-left: 3em;
+  }
+
+  .TransitionBeispiel:hover {
+    width: 70vw;
+    transition-duration: 2.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .Box {
+    width: 10em;
+    height: 10em;
+
+    background-color: red;
+  }
+
+  .RotierteBox {
+    width: 10em;
+
+    background-color: red;
+    transform: rotate(45deg);
+    /*translate(30em,-10em)*/
+  }
+
+  .VerzerrteBox {
+    width: 10em;
+    background-color: red;
+    transform: skew(-25deg);
+    /*translate(30em,-10em)*/
+  }
+
+
+  .HoverBeispiel {
+    width: 10em;
+    height: 5em;
+    background: rgba(35, 35, 255, 0.3);
+    margin-left: 3em;
+  }
+
+  .HoverBeispiel:hover {
+    background-color: blue;
+    opacity: 1;
+
+  }
+
+  .FocusBeispiel:focus {
+    background-color: red;
+  }
+
+  .CheckedBeispiel:checked {
+    color: aquamarine;
+    transform: rotateY(-720deg);
+    transition: 3000ms;
+  }
+
+  .grid-container-Bild {
+    padding: 2em 0em 2em 3em;
+    /*top,right,bottom,left*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }

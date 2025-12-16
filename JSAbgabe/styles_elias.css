@@ -1,0 +1,107 @@
+/* -------------------------------------------------- */
+/* Card Scroller — horizontal scrollable area         */
+/* -------------------------------------------------- */
+
+.CardScroller {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.CardScroller::-webkit-scrollbar {
+    height: 8px;
+}
+
+.CardScroller::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------- */
+/* Clickable Card — main card container               */
+/* -------------------------------------------------- */
+
+.ClickableCard {
+    flex: 0 0 320px;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    transform-origin: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effects */
+.ClickableCard:hover img,
+.ClickableCard:focus img {
+    transform: scale(1.1);
+}
+
+.ClickableCard:hover .CardTitle,
+.ClickableCard:hover .CardMore {
+    color: #1ebd4e;
+}
+
+/* -------------------------------------------------- */
+/* Card inner typography                              */
+/* -------------------------------------------------- */
+
+.ArticleBody {
+    padding: 24px;
+}
+
+/* Titel */
+.CardTitle {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+/* Untertitel */
+.CardSubtitle {
+    margin-bottom: 14px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #555;
+}
+
+/* "Mehr ansehen" */
+.CardMore {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    color: #555;
+}
+
+.CardMore:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------- */
+/* Media (image & figure behavior)                    */
+/* -------------------------------------------------- */
+
+figure {
+    margin: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}

@@ -1,0 +1,90 @@
+/* Jaylan versucht Dinge */
+.example-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;             /* Abstand zwischen Code und Button */
+    padding: 20px;
+    background: var(--blue-soft);
+    border: 1px solid var(--blue-border);
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.example-box pre {
+    padding: 8px 12px;
+    background: #b8bdd1;
+    border: 1px solid #b8bdd1
+    font-family: monospace; 
+    border-radius: 4px;
+    display: inline-block;
+}
+
+pre {
+    background: #d8ddf2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #b8bdd1;
+    font-family: monospace;
+    display: inline-block;
+}
+
+
+.button-border_0 {
+    border-radius: 0px !important;
+}
+
+.button-border_1 {
+    border-radius: 6px;
+}
+
+.button-border_2 {
+    border-radius: 9999px;
+}
+
+.button-color_1 {
+background-color: Darkcyan;
+}
+
+.button-color_2 {
+background-color: #008B8B;
+}
+
+.button-color_3 {
+background-color: rgb(0, 139, 139);
+}
+
+.button-font_10{
+font-size: 10px;
+}
+
+.button-font_25{
+font-size: 25px;
+}
+
+.button-font_50{
+font-size: 50px;
+}
+
+.Up_from_the_Buttom{
+    background-color: rgb(39, 114, 160);
+    border: none;
+    color: rgb(12, 4, 4);
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.popupBtn{
+    background-color: rgb(39, 114, 160);
+    border: none;
+    color: rgb(12, 4, 4);
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px; 
+}
+
+body {
+    transition: transform 0.6s ease;
+}
