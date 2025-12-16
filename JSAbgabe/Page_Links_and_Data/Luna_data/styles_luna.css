@@ -1,4 +1,5 @@
 
+
 #schriftart {
     font-family: Comic Sans MS;
 }
@@ -33,6 +34,11 @@ pre {
     font-family: monospace;
     display: inline-block;
 }
+
+.beispiel {
+  display: none;
+}
+
 
 .highlight {
     background-color: #a1c6ed;
