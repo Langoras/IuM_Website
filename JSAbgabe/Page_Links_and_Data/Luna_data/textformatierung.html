@@ -127,7 +127,8 @@
 			<p>In der praktischen Nutzung werden häufig mehrere Schriften angegeben, falls eine beim Nutzer nicht
 				vorhanden
 				ist. Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn1">CSS anzeigen / verstecken</button>
+			<pre id="beispiel1" class="beispiel">
 #schriftart {
     font-family: Comic Sans MS;
 }
@@ -140,7 +141,8 @@
 			<p id="schriftgroeße">Dies ist ein Beispiel mit der Textgröße 14.</p>
 
 			<p>Als Einheiten werden hier px, em oder rem verwendet. Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn2">CSS anzeigen / verstecken</button>
+			<pre id="beispiel2" class="beispiel">
 #schriftgroeße {
     font-size: 14px;
 }
@@ -151,7 +153,8 @@
 			<p id="schriftfarbe">Dies ist ein Beispiel in der Farbe blau.</p>
 			<p> Um eine Farbe festzulegen wird entweder der Farbname,
 				der Hex-Wert oder der RGB-Wert genutzt. Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn3">CSS anzeigen / verstecken</button>
+			<pre id="beispiel3" class="beispiel">
 #schriftfarbe {
     color: blue;
 }	
@@ -164,7 +167,8 @@
 				rüberkommt, ist hier etwas mehr Text.
 			</p>
 			<p>Hiermit können auch Abstände in alle Richtungen verändert werden. Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn4">CSS anzeigen / verstecken</button>
+			<pre id="beispiel4" class="beispiel">
 #absatz {
      margin-left: 60px;
     
@@ -184,7 +188,8 @@
 				Satz noch hier.
 			</p>
 			<p>Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn5">CSS anzeigen / verstecken</button>
+			<pre id="beispiel5" class="beispiel">
 #abstand {
     line-height: 2;
 }
@@ -198,9 +203,9 @@
 				kursiv oder unterstrichen wird.
 			</p>
 			<p id="hervorhebung">Dieses Beispiel zeigt kursiven und unterstrichenen Text.</p>
-			<button id="toggleBtn">Hervorhebung anzeigen / verstecken</button>
 			<p>Hier der CCS-Code zu dem Beispiel:</p>
-			<pre>
+			<button id="btn6">CSS anzeigen / verstecken</button>
+			<pre id="beispiel6" class="beispiel">
 #hervorhebung {
     font-style: italic;
     text-decoration: underline;
@@ -230,7 +235,7 @@
 				Hier die wichtigsten Erkenntnisse auf einen Blick:
 			</p>
 			<button id="lernBtn">Wichtige Begriffe hervorheben</button>
-			<ul>
+			<ul id="zusammenfassung">
 				<li>Wie ein Text formatiert ist trägt maßgeblich zur guten Lesbarkeit und somit zu einer interessannten
 					Website bei.</li>
 				<li>Mithilfe von CSS kann ein Text sehr viel gestaltet werden.</li>
@@ -247,44 +252,12 @@
 		<p>Erstellt in der 8Uhr Gruppe von Luna Post <time datetime="2025-12-02">am 02.12.2025</time></p>
 	</footer>
 
-<script>
-    
-    const toggleBtn = document.getElementById("toggleBtn");
-    const hervorhebung = document.getElementById("hervorhebung");
+<script src="script_luna.js"></script>
 
-    toggleBtn.addEventListener("click", () => {
-        hervorhebung.hidden = !hervorhebung.hidden;
-    });
-
-    
-    const lernBtn = document.getElementById("lernBtn");
-    let aktiv = false;
-
-    lernBtn.addEventListener("click", () => {
-        const listItems = document.querySelectorAll(
-            "article section:last-of-type ul li"
-        );
-
-        listItems.forEach(li => {
-            if (!li.textContent.includes(":")) return;
-
-            const [eigenschaften, beschreibung] = li.textContent.split(":");
-
-            if (!aktiv) {
-                li.innerHTML = `<span class="highlight">${eigenschaften}</span>:${beschreibung}`;
-            } else {
-                li.textContent = `${eigenschaften}:${beschreibung}`;
-            }
-        });
-
-        aktiv = !aktiv;
-        lernBtn.textContent = aktiv
-            ? "Hervorhebung entfernen"
-            : "Wichtige Begriffe hervorheben";
-    });
-</script>
 
 
 </body>
+
+</html>
 
 </html>
