@@ -14,16 +14,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.insertBefore(button, document.body.firstChild);
 });
-<script src="script.js"></script>
-
-<style>
-    .dark {
-        background-color: #121212;
-        color: white;
-    }
-
-    .dark a {
-        color: lightblue;
-    }
-</style>
 
