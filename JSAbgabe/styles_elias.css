@@ -25,6 +25,7 @@
 /* -------------------------------------------------- */
 
 .ClickableCard {
+    opacity: 0;
     flex: 0 0 320px;
     display: block;
     border-radius: 16px;
@@ -34,8 +35,14 @@
     text-decoration: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     scroll-snap-align: start;
+    transform: translateX(-80px);
     transform-origin: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.ClickableCard.isVisible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Hover effects */
